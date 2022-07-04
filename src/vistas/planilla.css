@@ -1,0 +1,132 @@
+/*=================PLANILLA===================================*/
+@keyframes aparecer{
+  from {opacity:0;}
+  to{opacity:1;}
+}
+
+  .planilla{    
+     border-radius: 10px 10px 10px 10px;
+    border: solid 1px grey;
+    background: linear-gradient( 90deg, rgba(205, 220, 57, 0.58) 5%, #ffc107d4 26%, rgba(255, 87, 34, 0.48) 100%);
+    border: 2px solid rgba(9, 230, 38, 0.356);
+    /* margin: auto; */
+    /* width: 80%; */
+    /* position: absolute; */
+    /* top: 10%; */
+    /* margin-top: 100px; */
+    max-height: 70%;
+    /* min-height: 20%; */
+    /* min-width: 50%; */
+    max-width: 70%;
+    text-align: center;
+    margin-top: 5%;
+    display: inline-block;
+    
+    }
+
+    #div-text{
+      margin-top: 5%;
+      /* margin-bottom: 10%; */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #div-img{
+          /* background-color: red; */
+    width: 50%;
+    height: 50%;
+    width: 100%;
+    /* align-items: center; */
+    text-align: center;
+    /* margin: 10%; */
+      
+    }
+
+    #div-bot{
+      width: 100%;
+    height: 50%;
+    }
+
+    .foto_planilla{
+      border-radius: 100px 100px 500px 500px;
+      width: 140px;
+      padding-bottom: 15px;
+    }
+
+
+    h2{
+    color: white;
+    margin-top: 10px;
+    font-family: Roboto;
+    font-size: 19px;
+    margin:10px;
+    text-shadow: 0em 0.1em #333;
+    }
+
+    h1{
+    color: white;
+    margin-top: 10px;
+    font-family: Roboto;
+    font-size: 25px;
+    margin:10px;
+    text-shadow: 0em 0.1em #333;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0.2;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+  .bot_planilla {
+    color: white;
+    font-family: inherit;
+    /* font-size: inherit; */
+    /* line-height: inherit; */
+    /* -webkit-appearance: none; */
+    -moz-appearance: none;
+    /* border: none; */
+    background: none;
+    cursor: none;
+    padding: 0;
+    /* display: inline-block; */
+    text-decoration: none;
+    /* -webkit-user-select: none; */
+    /* user-select: none; */
+    /* white-space: nowrap; */
+    vertical-align: middle;
+    border: none;
+    /* margin: 31px; */
+    width: 84%;
+    /* height: 140px; */
+    font-size: 20px;
+    border-radius: 0px 0px 2000px 2000px;
+    text-shadow: 0em 0.1em #333;
+   font-size: 20px;
+   animation: aparecer 2s infinite;
+     
+    }
+    
+    button.bot_planilla:hover{
+      font-weight: 400;
+      font-size: 25px;
+      transition: 1s;
+    }
+    
+    
+    
+    button.bot_planilla:active{
+      box-shadow: inset 0px 0px 20px 20px rgba(255, 255, 255, 0.603);
+      font-size: 25px;
+      transition: 0.2s;
+    }
+
+    button.bot_planilla:focus {
+      outline: none;
+    }
+
+    
+  

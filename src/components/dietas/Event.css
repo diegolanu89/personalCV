@@ -1,0 +1,33 @@
+#content_note{
+    color : white;
+    /* position: fixed; */
+    top: 0px;
+    /* min-width: 355px; */
+    margin: auto;
+    width: 540px;
+    max-width: 100%;
+    /*background: white;*/
+    border: 1px solid #a0a096;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    line-height: 1.125em;
+    /*background: linear-gradient( 
+90deg
+ , rgb(121 9 9 / 47%) 5%, rgb(182 20 20 / 77%) 26%, rgb(255 193 2 / 80%) 100%);*/
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#visor_note{
+     padding:20px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid;
+}
+
+.b_submit{
+    border:1px solid;
+    margin:2px;
+    background-color: transparent;
+}

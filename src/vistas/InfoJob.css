@@ -1,0 +1,16 @@
+#console{
+    text-align: center;
+  }
+
+#panel_info{
+  margin-top: 20%;
+}
+  
+
+#screen_info > #title_info {
+    font-size: 30px;
+    background: rgb(9,121,82);
+    background: linear-gradient(90deg, rgba(9,121,82,0) 5%, rgba(20,182,99,0.8127626050420168) 26%, rgba(0,212,255,0.7707457983193278) 100%);
+  }
+
+  

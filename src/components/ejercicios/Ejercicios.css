@@ -1,0 +1,22 @@
+.grilla_ejercicios{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+
+}
+
+.button_ejer{
+    font-family: Roboto;
+    width:110px;
+    height:110px;
+    border:none;
+    color: white;
+    box-shadow: 0px 0px 5px 2px rgb(255 255 255 / 30%);
+        border-radius: 10px 10px 10px 10px;
+        background-color: rgb(28 33 145 / 33%);
+        margin-bottom: 10px;
+        margin-top:10px;
+}

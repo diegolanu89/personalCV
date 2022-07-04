@@ -1,0 +1,142 @@
+.menu_edit {
+    position: absolute;
+    top: 0px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    min-height: 100px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(2, 96, 159) 5%, rgba(28, 34, 145, 0.966) 30%);
+    box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+}
+
+.menu_edit>.nombre_ejercicio {
+    margin-bottom: 10px;
+}
+
+.center_edit {
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(2, 96, 159, 0.88);
+    background: linear-gradient(180deg, rgb(2, 96, 159) 5%, rgba(28, 34, 145, 0.966) 30%);
+    box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+    font-family: Roboto;
+    display: flex;
+    min-height: 100px;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_edit>span {
+    min-width: 100px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+/*=======================NUMBER EDIT=============================*/
+
+#disminuir {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+
+#aumentar {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+#disminuir:active,
+#aumentar:active {
+    box-shadow: 0px 0px 5px 2px greenyellow;
+}
+
+#disminuir>img:active {
+    transition: 0.2s;
+    width: 35px;
+}
+
+
+.contenedor_num {
+    overflow-y: hidden;
+    height: 50px;
+    white-space: nowrap;
+    /*border:1px solid;*/
+    width: 43px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.numero_edit {
+    font-family: Digital;
+    color: greenyellow;
+    font-size: 55px;
+}
+
+scroll-container {
+    display: block;
+    width: 60px;
+    height: 50px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    margin: 10px;
+}
+
+scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+scroll-page {
+    font-family: Digital;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: greenyellow;
+    font-size: 65px;
+}
+
+scroll-page>span {
+    color: rgb(255 235 0);
+    font-size: 70px;
+}
+
+#arrow_down {
+    width: 40px;
+    filter: invert(1);
+    transform: rotate(90deg);
+}
+
+#arrow_up {
+    width: 40px;
+    filter: invert(1);
+    transform: rotate(270deg);
+}
+
+.loading_edit {
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    max-width: 500px;
+    
+    font-family: Roboto;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+}

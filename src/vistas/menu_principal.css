@@ -1,0 +1,40 @@
+@font-face{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+  }
+  
+  @font-face{
+    font-family: Source;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+  }
+  
+  body{
+  font-family: Source;
+   background-attachment: fixed;
+   background-color: grey;
+   background-size: cover;
+    width:100%;height:100%;
+    
+  }
+  
+  #root{
+   background-color: white;
+  
+   margin: 0 auto;
+   width:100%;height:100%;
+  }
+  
+  div.menu{
+    border: 0px rgba(14, 2, 48, 0.671) solid;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    box-shadow: inset 0 0px 20px rgb(218, 201, 201);
+    filter: blur(0px);
+    border-radius: 0px 0px 0px 0px ;
+    border:5px rgba(119, 114, 114, 0.199) solid;
+    background-image: url("../images/vb768.jpg");
+    background-size: cover;
+  }

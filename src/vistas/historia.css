@@ -1,0 +1,68 @@
+#reception_historia {
+        /* left: 0px; */
+        background-color: #00f3ff4f;
+        border-radius: 10px;
+        text-align: left;
+        color: #fff;
+        font-size: 16px;
+        color: white;
+        border-radius: 0.5em;
+        padding: 0 0em;
+        /* position: relative; */
+        overflow: hidden;
+        line-height: 32px;
+        /* width: 100%; */
+        background: rgb(9,121,82);
+        background: linear-gradient(90deg, rgba(9, 121, 82, 0.12) 5%, rgb(20, 182, 99) 26%, rgba(0, 212, 255, 0.37) 100%);
+        /* top: 110px; */
+        text-align: center;
+        /* margin-left: 39px; */
+        display: inline-block;
+        padding: 20px;
+        margin-top: 10%;
+}
+
+#title_info_cv {
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    left: 0px;
+    width: 100%;
+    background: rgb(9,121,82);
+    background: linear-gradient(90deg, rgba(9,121,82,0) 5%, rgba(20,182,99,0.8127626050420168) 26%, rgba(0,212,255,0.7707457983193278) 100%);
+  }
+
+#cronica {
+    left: 0px;
+    background: rgb(9,121,82);
+    background: linear-gradient(90deg, rgba(9, 121, 82, 0) 5%, rgba(20, 182, 99, 0.75) 26%, rgb(0, 212, 255) 100%);
+    margin: 25px;
+    border: 1px solid white;
+}
+
+#cronica:hover{
+    box-shadow: inset 0px 0px 5px 5px white;
+    transition: 0.2s;
+  }
+  
+ 
+  #cronica:active{
+    box-shadow: inset 0px 0px 20px 20px rgba(255, 255, 255, 0.603);
+    transition: 0.2s;
+  }
+
+  #cronica:focus {
+      outline: none;
+    }
+
+  .icono {
+    width: auto;
+    /* position: relative; */
+    height: 83px;
+    width: 90px;
+    
+    /* left: 21px; */
+    /* top: -26%; */
+    cursor: none;
+    border: 5px solid #89ff0045;
+  }

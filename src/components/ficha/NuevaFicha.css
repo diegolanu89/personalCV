@@ -1,0 +1,40 @@
+
+.title_card{
+    margin-top: 0px;
+}
+
+.form_input{
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+    background-color: transparent;
+    height: 45px;
+    color:white;
+    text-align: center;
+    font-family: Dagger;
+    font-size: 30px;
+    max-width: 75%;
+    animation: parpadeo 500ms linear 1;
+}
+
+.nav_card{
+    width:95%;
+    margin-top: 30px;
+    float: right;
+    animation: parpadeo 500ms linear 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.nav_card > button{
+    height:100%;
+    animation: parpadeo 500ms linear 1;
+}
+
+.nav_r{
+    flex-direction: row;
+}

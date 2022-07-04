@@ -1,0 +1,481 @@
+@font-face {
+  font-family: 'Digital';
+  src: local('Digital'), url(./fonts/DS-DIGI.TTF) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+
+@font-face {
+  font-family: 'Apex';
+  src: local('Apex'), url(./fonts/ApexMk2-Regular.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'Dagger';
+  src: local('Dagger'), url(./fonts/DAGGERSQUARE.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'Facon';
+  src: local('Facon'), url(./fonts/Facon.ttf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+button,button:focus{ outline: none; cursor: none;-webkit-user-select: none;}
+button:active{outline:none;cursor: none;-webkit-user-select: none;}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+}
+
+.salida_modal{
+  position: absolute;
+    width: 100%;
+    top: 25%;
+}
+
+.todo-title {
+  cursor: pointer;
+}
+.completed-todo {
+  text-decoration: line-through;
+}
+.tab-list > span {
+  padding: 5px 8px;
+  border: 1px solid #282c34;
+  border-radius: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.tab-list > span.active {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+.border{
+  border:1px solid;
+  margin:10px;
+}
+
+.font_app{
+  color:white;
+}
+
+.center_align{
+  text-align: center;
+}
+.bolder{
+  font-weight: bolder;
+}
+
+.right{
+  text-align: right;
+}
+
+.section_link{
+  border:1px solid white;
+  width:100%;
+  margin-bottom:10px ;
+  margin-top:10px;
+}
+
+a {
+  padding:5px;
+  width:400px;
+  color: #FFF;
+}
+a:hover {
+   color: #00F
+}
+
+a:active,button:active{
+  transition: 0.2s;
+  font-size: 10px;
+}
+.section{
+  border:1px solid;
+  width:100%;
+  margin-bottom:10px ;
+  margin-top:10px;
+}
+
+.salir_b{
+  border:none;
+  background-color: transparent;
+  color:white;
+}
+
+label,div{
+  color:white;
+}
+
+#btn_rojo{
+  background-color: #ff1f01;
+  color:white;
+  font-family: Roboto;
+  font-size: 13px;
+}
+
+#btn_rojo:active{
+  border:none;
+  background-color: #ff1f01;
+  color:white;
+  box-shadow:inset 0px 0px 15px 5px rgba(243, 118, 118, 0.562);
+  font-size: 10px;
+  
+}
+
+#btn_verde{
+  background-color: #28a745;
+  color:white;
+  font-family: Roboto;
+  font-size: 13px;
+}
+
+#btn_verde:active{
+  border:none;
+  background-color: #28a745;
+  color:white;
+  box-shadow:inset 0px 0px 15px 5px rgba(255, 255, 255, 0.562);
+  font-size: 10px;
+}
+
+.btn_sta{
+  box-shadow: 0px 0px 5px 2px rgb(255 255 255 / 30%);
+    border-radius: 10px 10px 10px 10px;
+    background-color: transparent;
+    /*background-color: white;*/
+    color:white;
+    border:none;
+    min-width: 100px;
+    min-height: 30px;
+}
+
+.btn_sta:hover{
+  transition: 0.2s;
+  box-shadow: 0px 0px 1px 1px rgb(255 255 255 / 30%);
+}
+.btn_sta:active{
+  transition: 0.2s;
+  box-shadow: 0px 0px 1px 1px rgb(255 255 255 / 30%);
+}
+
+.ultraflex{
+  display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ultraflex_space{
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide_hor_scroll{
+  font-size: 13px;
+  font-family: Roboto;
+  overflow-y: hidden;
+  height: 50px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.slide_hor_scroll >button{
+  font-family: Roboto;
+    width:100px;
+    height:35px;
+      border:none;
+      box-shadow: 0px 0px 5px 2px rgb(255 255 255 / 30%);
+      border-radius: 10px 10px 10px 10px;
+      background-color: transparent;
+      /*background-color: white;*/
+      color:white;
+}
+
+.slide_hor_scroll >button:hover{
+  transition: 0.2s;
+  box-shadow: 0px 0px 1px 1px rgb(255 255 255 / 30%);
+}
+
+.slide_hor_scroll >button:active{
+  transition: 0.2s;
+  box-shadow:inset 0px 0px 5px 5px rgb(255 255 255 / 30%);
+}
+
+.slim{
+  border:1px solid;
+}
+
+.margin_ex{
+  margin:15px;
+}
+
+@keyframes prog_slide {
+  0% {
+      width: 0%;
+      /*background-color: rgba(0, 0, 255, 0.795);*/
+  }
+
+  50% {
+      width: 50%;
+      /*background-color: rgba(171, 130, 238, 0.466);*/
+  }
+
+  100% {
+      width: 100%;
+      /*background-color: rgba(255, 255, 255, 0.479);*/
+  }
+}
+
+@keyframes prog_hide {
+  0% {
+      max-width: 200px;
+      background-color: rgba(0, 0, 255, 0.692);
+  }
+
+  50% {
+      max-width: 100px;
+      background-color: rgba(177, 130, 238, 0.466);
+  }
+
+  100% {
+      max-width: 50px;
+      background-color: rgba(255, 255, 255, 0.466);
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes blur {
+  0% {
+    -webkit-filter: blur(200px);
+    -moz-filter: blur(200px);
+    -o-filter: blur(200px);
+    -ms-filter: blur(200px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+  }
+  
+}
+
+/*LOGOTIPO=============================================================================*/
+
+.logotipo{
+  font-family: Roboto;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 80px rgb(252 0 0);
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aitf 80s linear infinite;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    -webkit-filter: invert(1);
+}
+
+@keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+.logotipo_right_min{
+  margin-top: 30px;
+  text-align: right;
+  padding:10px;
+  font-family:Facon;
+  font-size: 30px;
+  margin-bottom:10px;
+  text-shadow: 0 0 80px rgb(252, 0, 0);
+
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+    -webkit-filter:invert()
+}
+/*LOGOTIPO=============================================================================*/
+
+/*===================================STARTING==========================================*/
+
+.starting{
+  position: absolute;
+  width:100%;
+  height:100%;/*
+  
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image 
+
+	  -webkit-text-fill-color: transparent;
+	  animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations 
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;*/
+   
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/*
+.starting >.logotipo{
+  font-size: 200px;
+  height:50%;
+  
+}
+
+.starting >.logotipo > .logotipo{
+  font-size: 70px;
+  text-align: center;
+  position: relative;
+    bottom: 126px;-webkit-filter:invert(0)
+}*/
+
+/*===================================STARTING==========================================*/
+
+
+/*SECTIONS*/
+
+.section__body {
+  border-radius: 0px 0px 20px 20px;
+  width: 95%;
+  max-width: 500px;
+  background: rgba(2, 96, 159, 0.88);
+  background: linear-gradient(180deg, rgb(2 152 159 / 88%) 5%, rgb(0 0 0 / 67%) 30%);
+  box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+  font-family: Roboto;
+  min-height: 555px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  animation: parpadeo 500ms linear 1;
+}
+
+.form_type{
+  border-radius: 10px;
+  width: 95%;
+  height: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(2 145 159) 5%, rgb(0 0 0 / 97%) 58%);
+  box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  animation: parpadeo 500ms linear 1;
+}
+
+.section_title {
+  width: 95%;
+  max-width: 500px;
+  text-align: center;
+  font-family: Roboto;
+  border-radius: 20px 20px 0px 0px;
+  background: rgb(42 161 173 / 88%);
+  min-height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+  animation: parpadeo 500ms linear 1;
+}
+
+.card_ficha {
+  background: linear-gradient(180deg, rgb(2 152 159) 5%, rgb(0 0 0 / 97%) 30%);
+  box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+  border-radius: 20px;
+  margin-top: 30px;
+  min-height: 400px;
+  align-content: center;
+}
+
+.section_bar_home {
+  border-radius: 0px 0px 10px 10px;
+  width: 340px;
+  height: 30px;
+  background-color: rgb(0 0 0 / 70%);
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 2px 2px rgb(255 255 255 / 30%);
+  font-family: Roboto;
+  animation: parpadeo 1500ms linear 1;
+}
+
+
+
+.form_input{
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  box-shadow: 0px 0px 5px 1px rgb(255 255 255 / 30%);
+  background-color: transparent;
+  height: 45px;
+  color:white;
+  text-align: center;
+  font-family: Dagger;
+  font-size: 30px;
+  max-width: 75%;
+  animation: parpadeo 500ms linear 1;
+}

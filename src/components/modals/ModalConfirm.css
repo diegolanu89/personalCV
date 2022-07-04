@@ -1,0 +1,25 @@
+.nav_alert{
+    width:100%;
+    margin-top: 20px;
+    height:50px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    animation:blur 1 linear 1s;
+}
+
+.nav_alert >button{
+    height:75%;
+    font-size: 25px;
+}
+
+.alert{
+    animation:blur 1 linear 0.5s;
+}
+
+.text_modal{
+    text-align: center;
+}

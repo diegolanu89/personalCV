@@ -1,0 +1,43 @@
+
+body{
+    background: rgb(9,121,82);
+}
+
+/*====================BOTONES================================*/
+
+.bg{ /*CON FONDO*/
+    background: rgb(9,121,82);
+    background: linear-gradient(
+90deg
+, rgba(9, 121, 82, 0) 5%, rgba(20, 182, 99, 0.75) 26%, rgb(0, 212, 255) 100%);
+    border: 1px solid white;
+}
+
+.bg-no{   /*SIN FONDO*/
+    -moz-appearance: none;
+    background: none;
+    border: solid white 1px;
+    margin: 4px;
+    font-size: 13px;
+}
+
+/*====================FONDOS REGULARES================================*/
+.bc-regular{
+        background-color: #00f3ff4f;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 16px;
+        color: white;
+        overflow: hidden;
+        line-height: 32px;
+        background: rgb(9,121,82);
+        background: linear-gradient(
+    90deg
+    , rgba(9, 121, 82, 0.12) 5%, rgb(20, 182, 99) 26%, rgba(0, 212, 255, 0.37) 100%);
+        text-align: center;
+        display: inline-block;
+}
+
+.b-tail{
+    color:red;
+}
