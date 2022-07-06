@@ -1,7 +1,6 @@
 import React from "react";
 import './NuevaFicha.css';
 import CardNombreEdad from "./CardNombreEdad";
-import CardPesoAltura from "./CardPesoAltura";
 import ModalConfirm from "../modals/ModalConfirm"
 import {Salida} from "../modals/Salida"
 import Loading from "../modals/Loading";

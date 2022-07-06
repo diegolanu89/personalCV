@@ -7,58 +7,62 @@ class ModelInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      datos: {
-        titulo: this.props.request.titulo,
-        cargo: this.props.request.cargo,
-        info: this.props.request.info,
-        fecha_inicial: this.props.request.fecha_inicial,
-        fecha_final: this.props.request.fecha_final,
-        before: this.props.request.before,
-        after: this.props.request.after
-      },
+      animation_active: null,
+      show:'flex',
     };
-
     this.handleChange = this.handleChange.bind(this);
-    this.handleUpdate = this.handleUpdate.bind(this);
+    this.set_animation = this.set_animation.bind(this);
   }
 
-  handleChange = (value) => {
-    var ws = require('./ws.js')();
-    var obtener_info = ws[value];
-    var response = obtener_info()
-    var datos = {}
-    datos.titulo = response['titulo'];
-    datos.cargo = response['cargo'];
-    datos.info = response['info'];
-    datos.fecha_inicial = response['fecha_inicial'];
-    datos.fecha_final = response['fecha_final'];
-    datos.before = response['before'];
-    datos.after = response['after'];
-    this.setState({ datos });
-    this.props.update(datos)
+  handleChange = (value, derecha) => {
+    this.set_animation(derecha?'slide_right 0.5s linear 1':'slide_left 0.5s linear 1')
+    setTimeout(() => {
+      this.setState({ show: 'none' });
+    }, 500);
+    setTimeout(() => {
+      var ws = require('../../assets/ws.js')();
+      var obtener_info = ws[value];
+      var response = obtener_info()
+      var datos = {}
+      datos.titulo = response['titulo'];
+      datos.cargo = response['cargo'];
+      datos.info = response['info'];
+      datos.fecha_inicial = response['fecha_inicial'];
+      datos.fecha_final = response['fecha_final'];
+      datos.before = response['before'];
+      datos.after = response['after'];
+      this.props.update(datos)
+      this.setState({ show: 'flex' });
+      this.set_animation(derecha?'slide_right_end 0.5s linear 1':'slide_left_end 0.5s linear 1')
+    }, 500);
   }
 
-  handleUpdate = (datos) => {
-    this.setState({ datos });
+  set_animation = (direction) => {
+    this.setState({ animation_active: direction });
   }
 
   render() {
-
-    return <div id="job">
+    
+    return <div id="job" style={{ animation: this.state.animation_active , display:this.state.show}}>
+      <div id="background_interno">
+        <div id="filter_interno">
       <div className="info_input" key="cash" id="info_job">
-        <div id="fecha_ini">{this.state.datos.fecha_inicial}</div>
-        <div id="fecha_fin">{this.state.datos.fecha_final}</div>
-        <div id='tit_j'>{this.state.datos.titulo}</div>
-        <div id='inf_j'>{this.state.datos.info}</div>
-        <div id='cargo'>Cargo : {this.state.datos.cargo}</div>
+        <div id="fechas_bar">
+            <div id="fecha_ini">{this.props.request.fecha_inicial}</div>
+            <div id="fecha_fin">{this.props.request.fecha_final}</div>
+        </div>
+        <div id='tit_j'>{this.props.request.titulo}</div>
+        <div id='inf_j'>{this.props.request.info}</div>
+        <div id='cargo'>Función: {this.props.request.cargo}</div>
 
       </div>
 
+      <div className="bar_model">
       <div className="info_input" id="ba" key="be">
-        {this.state.datos.before ?
-          <button className="bt_j_l" onClick={this.handleChange.bind(this, this.state.datos.before.toLowerCase())}>
-            <img id="icon_slide_arrow_inv" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.state.datos.before.toLowerCase())}></img>
-            <span id="sl">Trabajo Anterior : {this.state.datos.before}</span>
+        {this.props.request.before ?
+          <button className="bt_j_l" onClick={this.handleChange.bind(this, this.props.request.before.toLowerCase(), false)}>
+            <img id="icon_slide_arrow_inv" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.before.toLowerCase(), false)}></img>
+            <span id="sl">Trabajo Anterior : {this.props.request.before}</span>
           </button>
           :
           <button className="bt_j_l">
@@ -69,16 +73,19 @@ class ModelInfo extends React.Component {
 
 
       <div className="info_input" id="ba" key="af">
-        {this.state.datos.after ?
-          <button className="bt_j_r" onClick={this.handleChange.bind(this, this.state.datos.after.toLowerCase())}>
+        {this.props.request.after ?
+          <button className="bt_j_r" onClick={this.handleChange.bind(this, this.props.request.after.toLowerCase(), true)}>
 
-            <span id="sr">Trabajo Posterior : {this.state.datos.after} </span>
-            <img id="icon_slide_arrow" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.state.datos.after.toLowerCase())}></img>
+            <span id="sr">Trabajo Posterior : {this.props.request.after} </span>
+            <img id="icon_slide_arrow" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.after.toLowerCase(), true)}></img>
           </button>
           :
           <button className="bt_j_r">
             Sin trabajos posteriores
           </button>}
+      </div>
+      </div>
+      </div>
       </div>
     </div>;
 

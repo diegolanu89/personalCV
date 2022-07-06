@@ -14,10 +14,11 @@ class SlideMenu extends React.Component {
   }
 
   desplegar() {
-    if (this.state.desplegado === true)
+    if (this.state.desplegado === true){
       this.setState({ desplegado: false })
-    else
+    }else{
       this.setState({ desplegado: true })
+    }
   }
 
 

@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import NuevaFicha from './components/ficha/NuevaFicha';
 import Skill from './components/skill/Skill'
-import Historia from './components/historia/Historia';
 
 import { Login } from './components/sesion/Login'
 import { Register } from './components/sesion/Register'
