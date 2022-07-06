@@ -77,7 +77,7 @@ export function Register() {
 
       {(loading !== false) ?
         <Loading text={loadingText} carga={true} nivel={loadingCharge}></Loading>
-        : <div className="logotipo">RDIET</div>}
+        : <div className="logotipo">CV DIEGO PEYRANO</div>}
       
 
         <form onSubmit={handleSubmit}>

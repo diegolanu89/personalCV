@@ -5,6 +5,7 @@
 .slide_oculto {
     border-radius: 0px 20px 20px 0px;
     background-color: tranparent;
+    width: 50px;
     max-width: 373px;
     position: relative;
     display: flex;
@@ -13,41 +14,38 @@
     justify-content: center;
     align-items: center;
     z-index: 19 !important;
-    border-radius: 0px 100% 100% 0px;
+    /* border-radius: 0px 100% 100% 0px; */
     animation: prog_hide 400ms linear 1;
     height: 100%;
-    background: linear-gradient(90deg, rgb(2, 96, 159) 5%, rgba(255, 255, 255, 0.185) 30%);
-    box-shadow: 2px 0px 3px 1px rgb(255 255 255);
+    background: linear-gradient(90deg, #07d63680 5%, #28a74591 30%);
+    box-shadow: 2px 0px 3px 1px rgb(255 255 255 / 25%);
     animation: parpadeo 500ms linear 1;
 }
 
 .slide_desplegado {
-       /* border: 1px solid; 
-       border-radius: 0px 10px 10px 0px;*/
-       background-color: tranparent;
-       max-width: 373px;
-       position: relative;
-       display: flex;
-       flex-wrap: wrap;
-       align-content: center;
-       justify-content: space-around;
-       align-items: center;
-       z-index: 19 !important;
-       height: 100%;
-       background: linear-gradient(90deg, rgb(0 0 0 / 15%) 5%, rgba(255, 255, 255, 0.185) 30%);
-       /* box-shadow: 2px 0px 3px 1px rgb(255 255 255); */
-       animation: prog_slide 400ms linear 1;
-       flex-direction: column-reverse;
+    background-color: tranparent;
+    max-width: 373px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: 19 !important;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(0 0 0 / 15%) 5%, rgba(255, 255, 255, 0.185) 30%);
+    /* box-shadow: 2px 0px 3px 1px rgb(255 255 255); */
+    animation: prog_slide 400ms linear 1;
+    flex-direction: column-reverse;
 }
 
 
 
 
 #link_slide {
-    
     height: 88px;
     display: flex;
-    width: 100%;
+    width: 90%;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
@@ -65,7 +63,7 @@
     /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 10%, rgb(255, 255, 255) 50%, #ff000000 1%); */
     /* background: linear-gradient(86deg, rgba(2,0,36,0.7259278711484594) 0%, rgb(244 244 244 / 0%) 35%, rgb(0 212 255 / 47%) 66%, rgba(0,212,255,0) 86%); */
     border-radius: 0px 10px 10px 0px;
-    background: rgb(2 159 137 / 88%);
+    background: rgb(2 159 107 / 72%);
 }
 
 @keyframes trans_horizon {
@@ -99,6 +97,7 @@
     justify-content: flex-start;
     align-items: center;
     font-size: 20px;
+    text-shadow: 1px 1px black;
 }
 
 #link_slide>a:hover {

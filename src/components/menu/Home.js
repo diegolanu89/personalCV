@@ -48,7 +48,7 @@ export function Home() {
                 <Starting />
                 :
                 <div id="conteiner">
-                    <div className="section_bar_home right">
+                    <div className="section_bar_home right" >
                         <a href="#!" onClick={handleLogout}>Cerrar sesión</a>
                     </div>
 
@@ -56,12 +56,14 @@ export function Home() {
                         <span className="bolder large">Bienvenido</span> {user.displayName || user.email}
                     </div>
 
-                    <div className="section_home_body">
+                    <div className="section_home_body" id="background_center">
+                        <div id="filter">
                         <FirebaseAppProvider firebaseConfig={firebaseConfig}>
                             <Suspense fallback={<p>Cargando...</p>}>
                                 <SlideMenu links={references} texts={texts} />
                             </Suspense>
                         </FirebaseAppProvider>
+                        </div>
                     </div>
                 </div>
             }

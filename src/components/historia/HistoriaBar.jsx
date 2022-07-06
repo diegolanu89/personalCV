@@ -2,14 +2,6 @@ import React from "react";
 import './historia.css';
 import '../menu/Home.css';
 
-import ncr from '../../images/ncr.jpg';
-import cetek from '../../images/cetek.jpg';
-import accesorios from '../../images/accesorios.jpg';
-import tecnico from '../../images/tecnico.jpg';
-
-import {jobs_title} from '../../assets/jobs.js'
-import {jobs_index} from '../../assets/jobs.js'
-
 class HistoriaBar extends React.Component {
 
     constructor(props) {
@@ -33,7 +25,7 @@ class HistoriaBar extends React.Component {
     }
 
     mostrar_trabajo = (value) => {
-        var ws = require('../../assets/ws.js')();
+        var ws = require('../../assets/' + this.props.info_jobs)();
         var obtener_info = ws[value];
         var response = obtener_info();
         var datos = {}
@@ -48,16 +40,16 @@ class HistoriaBar extends React.Component {
     }
 
     center_item_selected=()=>{
-        var index = jobs_title()
+        var index = this.props.tittles
         var page = 'page_' + index.indexOf(this.props.actual.titulo)
         document.getElementById(page).scrollIntoView();
     }
 
     render() {
         let jobs = []
-        var types = jobs_index()
-        var tittle = jobs_title()
-        var imagenes = [accesorios,tecnico,cetek,ncr]
+        var types = this.props.types
+        var tittle = this.props.tittles
+        var imagenes = this.props.img
         for (var i = 0; i < types.length; i++) {
             jobs.push(
                 <scroll-page  key={i + 'p'} id={'page_' + i.toString()}>

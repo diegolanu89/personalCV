@@ -3,9 +3,7 @@ import './navegador.css';
 import Historia from './Historia';
 import ModelInfo from "./ModelInfo";
 import HistoriaBar from "./HistoriaBar";
-
 import { Link } from "react-router-dom";
-
 class Navegador extends React.Component {
 
     constructor(props) {
@@ -57,7 +55,12 @@ class Navegador extends React.Component {
                         {(this.state.his) ?
 
                             <div >
-                                <Historia update_info={this.handle_get_info} />
+                                <Historia types={this.props.types} 
+                                tittles={this.props.tittles} 
+                                update_info={this.handle_get_info} 
+                                info_jobs={this.props.info_jobs}
+                                img ={this.props.img}
+                                />
                             </div>
 
                             : null}
@@ -65,8 +68,17 @@ class Navegador extends React.Component {
                         {(this.state.his) === false ?
 
                             <div id="job">
-                                <ModelInfo request={this.state.response} update={this.handle_get_info_modal} />
-                                <HistoriaBar actual={this.state.response} update_info={this.handle_get_info_modal} />
+                                <ModelInfo  request={this.state.response} 
+                                update={this.handle_get_info_modal} 
+                                info_jobs={this.props.info_jobs}/>
+
+                                <HistoriaBar img ={this.props.img} 
+                                actual={this.state.response} 
+                                update_info={this.handle_get_info_modal} 
+                                types={this.props.types} 
+                                tittles={this.props.tittles}
+                                info_jobs={this.props.info_jobs}
+                                />
                             </div>
 
                             : null}

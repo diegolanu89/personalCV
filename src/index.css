@@ -530,10 +530,75 @@ label,div{
   backdrop-filter: blur(-20px) saturate(100%);
 }
 
+#filter {
+  background: linear-gradient(180deg, rgb(2 159 137 / 88%)0%, rgb(173 173 190 / 64%) 35%, rgb(162 180 184 / 66%) 66%, rgb(2 159 137 / 88%) 86%);
+  height: 100%;
+  width: 100%;
+  -webkit-backdrop-filter: blur(0px) saturate(100%);
+  backdrop-filter: blur(-20px) saturate(100%);
+}
+
 .blur {
   background: linear-gradient(180deg, rgb(230 218 218) 0%, rgb(9 9 121 / 0%) 35%, rgb(0 212 255 / 0%) 66%, rgb(255 255 255) 86%);
   height: 100%;
   width: 100%;
   
   backdrop-filter: blur(1px) saturate(34%);
+}
+
+
+@keyframes crt-me {
+  0% {
+    color:black;
+    box-shadow: 10px 10px red;
+    text-shadow: 2px 0 #e40505, -1px 0 yellow, -2px 0 green;
+   }
+   
+   
+   100% {
+    color:white;
+    box-shadow: none;
+    text-shadow: 1px 1px black;
+   }
+   
+}
+
+@keyframes blur_adv{
+  from{
+      text-shadow:0px 0px 10px rgb(0, 255, 213),
+      0px 0px 10px rgb(0, 255, 213), 
+      0px 0px 25px rgb(0, 255, 213),
+      0px 0px 25px rgb(0, 255, 213),
+      0px 0px 25px rgb(0, 255, 213),
+      0px 0px 25px rgb(0, 255, 213),
+      0px 0px 25px rgb(0, 255, 213),
+      0px 0px 25px rgb(0, 255, 213),
+      0px 0px 50px rgb(0, 255, 213),
+      0px 0px 50px rgb(0, 255, 213),
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+#alert_div{
+  border: none;
+  /* border: 1px solid red; */
+  width: 80%;
+  text-align: center;
+  padding:15px;
+}
+
+
+
+#span_alert{
+ 
+	text-shadow: 1px 1px black;
+	overflow: hidden;
+	animation: blur_adv .75s ease-out 2 alternate-reverse;
 }

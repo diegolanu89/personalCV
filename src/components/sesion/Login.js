@@ -23,7 +23,10 @@ export function Login() {
       await login(user.email, user.password);
       navigate("/");
     } catch (error) {
-      setError(error.message);
+      if(error.message.substr(22,14) === 'user-not-found')
+        setError('No existe el usuario ingresado');
+      else
+        setError(error.message.substr(10,100));
     }
   };
 
@@ -35,7 +38,7 @@ export function Login() {
       await loginWithGoogle();
       navigate("/");
     } catch (error) {
-      setError(error.message);
+      setError(error.message.substr(10,100));
     }
   };
 
@@ -49,7 +52,7 @@ export function Login() {
         navigate("/");
       }, 5500)
     } catch (error) {
-      setError(error.message);
+      setError(error.message.substr(10,100));
     }
   };
 
@@ -57,10 +60,11 @@ export function Login() {
     <div className="section_back_login">
       <div id="section">
       <div className="section_bar_login">Iniciar Sesión</div>
-      {error && <Alert message={error} />}
+      
 
       <div className="section_login_body">
       <div className="logotipo">CV Diego Peyrano</div>
+      {error && <Alert message={error} />}
         <form onSubmit={handleSubmit}>
           <div >
             <label htmlFor="email">Email</label>

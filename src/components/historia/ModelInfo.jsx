@@ -20,7 +20,7 @@ class ModelInfo extends React.Component {
       this.setState({ show: 'none' });
     }, 500);
     setTimeout(() => {
-      var ws = require('../../assets/ws.js')();
+      var ws = require('../../assets/' + this.props.info_jobs)();
       var obtener_info = ws[value];
       var response = obtener_info()
       var datos = {}
@@ -62,7 +62,7 @@ class ModelInfo extends React.Component {
         {this.props.request.before ?
           <button className="bt_j_l" onClick={this.handleChange.bind(this, this.props.request.before.toLowerCase(), false)}>
             <img id="icon_slide_arrow_inv" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.before.toLowerCase(), false)}></img>
-            <span id="sl">Trabajo Anterior : {this.props.request.before}</span>
+            <span id="sl"> {this.props.request.before}</span>
           </button>
           :
           <button className="bt_j_l">
@@ -76,7 +76,7 @@ class ModelInfo extends React.Component {
         {this.props.request.after ?
           <button className="bt_j_r" onClick={this.handleChange.bind(this, this.props.request.after.toLowerCase(), true)}>
 
-            <span id="sr">Trabajo Posterior : {this.props.request.after} </span>
+            <span id="sr"> {this.props.request.after} </span>
             <img id="icon_slide_arrow" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.after.toLowerCase(), true)}></img>
           </button>
           :

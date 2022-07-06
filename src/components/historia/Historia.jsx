@@ -1,12 +1,6 @@
 import React from "react";
 import './historia.css';
 import '../menu/Home.css';
-import ncr from '../../images/ncr.jpg';
-import cetek from '../../images/cetek.jpg';
-import accesorios from '../../images/accesorios.jpg';
-import tecnico from '../../images/tecnico.jpg';
-import {jobs_title} from '../../assets/jobs.js'
-import {jobs_index} from '../../assets/jobs.js'
 
 class Historia extends React.Component {
 
@@ -27,7 +21,7 @@ class Historia extends React.Component {
     };
 
     mostrar_trabajo = (value) => {
-        var ws = require('../../assets/ws.js')();
+        var ws = require('../../assets/' + this.props.info_jobs)();
         var obtener_info = ws[value];
         var response = obtener_info();
         var datos = {}
@@ -43,9 +37,9 @@ class Historia extends React.Component {
 
     render() {
         let jobs = []
-        var types = jobs_index()
-        var tittle = jobs_title()
-        var iconos = [accesorios,tecnico,cetek,ncr]
+        var types = this.props.types
+        var tittle = this.props.tittles
+        var iconos = this.props.img
         for (var i = 0; i < types.length; i++) {
             jobs.push(<button key={i} className='bot_h' id='cronica'
                     onClick={this.mostrar_trabajo.bind(this, types[i])} >
@@ -55,9 +49,13 @@ class Historia extends React.Component {
         }
 
         return <div id="conteiner">
+            <div id="background_interno">
+                <div id="filter_interno">
             <div className="section_title_body">{this.state.explanation}</div>
             <div className="section_history_body" >
                 {jobs}
+            </div>
+            </div>
             </div>
         </div>;
 
