@@ -18,7 +18,7 @@
 }
 
 .nav_card{
-    width:95%;
+    width: 95%;
     margin-top: 30px;
     float: right;
     animation: parpadeo 500ms linear 1;
@@ -27,14 +27,45 @@
     align-items: center;
     align-content: center;
     height: 60px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .nav_card > button{
-    height:100%;
-    animation: parpadeo 500ms linear 1;
+    height: 100%;
+    animation: blur 500ms linear 1;
+    color: white;
+    background: #0dd50da1;
+    width: 50%;
+    margin-bottom: 10px;
 }
 
 .nav_r{
     flex-direction: row;
 }
+
+@keyframes blur {
+    0% {
+      -webkit-filter: blur(200px);
+      -moz-filter: blur(200px);
+      -o-filter: blur(200px);
+      -ms-filter: blur(200px);
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-filter: blur(0px);
+    }
+    
+  }
+
+#conteiner_card{
+    height: 100%;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }

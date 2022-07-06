@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Alert } from "./Alert";
-import GymServices from '../../services/GymServices'
+import CvServices from "../../services/CvServices";
 import Loading from "../modals/Loading";
 import './Register.css'
 
@@ -31,34 +31,35 @@ export function Register() {
 
       await signup(user.email, user.password);
       setLoadingCharge('10%')
-      setLoadingText('Añadiendo datos');
-      GymServices.initUser(user.email).then(() => {
-        console.log("USUARIO INICIADO");
-        setLoadingCharge('20%')
-        setLoadingText('Añadiendo Ejercicios');
-        GymServices.initEjercicios(user.email).then(() => {
-          console.log("EJERCICIOS INICIADOS");
-          setLoadingCharge('70%')
-          setLoadingText('Añadiendo Rutinas');
-          GymServices.initRutinas(user.email).then(() => {
-            console.log("RUTINAS INICIADOS");
-            setLoadingCharge('100%')
+      setLoadingText('Iniciando usuario');
+
+      CvServices.initUser(user.email).then(() => {
+
+        setTimeout(() => {
+          setLoadingCharge('20%')
+            setLoadingText('Añadiendo Usuario');
+        }, 1000)
+
+        setTimeout(() => {
+          setLoadingCharge('50%')
+            setLoadingText('Añadiendo Usuario');
+        }, 1500)
+
+        setTimeout(() => {
+          setLoadingCharge('100%')
             setLoadingText('¡Listo!');
-            setTimeout(() => {
-              setLoading(false);
-              navigate("/usuarioNuevo");
-            }, 1000)
+        }, 2000)
+        
+
+        setTimeout(() => {
+          setLoading(false);
+          navigate("/usuarioNuevo");
+        }, 2500)
+            
           }).catch((e) => {
             console.log(e);
           });
-        })
-          .catch((e) => {
-            console.log(e);
-          });
-      })
-        .catch((e) => {
-          console.log(e);
-        });
+        
 
 
 

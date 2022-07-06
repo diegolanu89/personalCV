@@ -4,7 +4,7 @@ import CardNombreEdad from "./CardNombreEdad";
 import ModalConfirm from "../modals/ModalConfirm"
 import {Salida} from "../modals/Salida"
 import Loading from "../modals/Loading";
-import GymServices from '../../services/GymServices'
+import CvServices from '../../services/CvServices'
 import { Navigate } from 'react-router-dom';
 class NuevaFicha extends React.Component {
 
@@ -76,7 +76,7 @@ class NuevaFicha extends React.Component {
         this.setLoading();
         this.setState({ loading_charge: '50%' })
         setTimeout(() => {
-            GymServices.updateFicha(data).then(() => {
+            CvServices.updateFicha(data).then(() => {
                 this.setState({ loading_charge: '75%' })
                 console.log('Ficha update')
                 setTimeout(() => {
@@ -129,21 +129,21 @@ class NuevaFicha extends React.Component {
     render() {
 
 
-        return <div className='section_back_login'>
-            <div id="section">
+        return <div id="conteiner">
+           
             <div className="section_bar_home right">
                 <a href="#!" onClick={()=>this.salida()}>Cerrar sesión</a>
                 </div>
 
-            <div className="section_title_ejercicios">COMPLETE SUS DATOS PERSONALES
+            <div className="section_title_home">COMPLETE SUS DATOS PERSONALES
                 {(this.state.loading !== false) ?
                     <Loading text={this.state.loading_porcent} carga={true} nivel={this.state.loading_charge}></Loading>
                     : null}
             </div>
 
-            <div className="section_ejercicios_body">
+            <div className="section_home_body">
                 {this.state.object[this.state.actual]}
-                <div className="logotipo_right_min">DIEGO PEYRANO</div>
+                <div className="logotipo_right_min">CV</div>
             </div>
 
             {(this.state.confirmar === true) ?
@@ -169,7 +169,7 @@ class NuevaFicha extends React.Component {
             {this.state.redirect ? (<Navigate push to="/" />) : null}
 
             {this.state.salida ? (<Salida  salida={this.salida}/>) : null}
-            </div>
+            
         </div>;
     }
 

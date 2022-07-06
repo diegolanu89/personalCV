@@ -3,7 +3,7 @@ import React from "react";
 import { Suspense, useEffect, useState } from "react";
 import { FirebaseAppProvider } from 'reactfire';
 import { firebaseConfig } from "../../firebase";
-import GymServices from '../../services/GymServices';
+import CvServices from "../../services/CvServices";
 import { useNavigate } from "react-router-dom";
 import './Home.css'
 import Starting from "../modals/Starting";
@@ -26,7 +26,7 @@ export function Home() {
             setStarting(false)
           }, 1000)
         
-        GymServices.getFicha().then((res) => {
+          CvServices.getFicha().then((res) => {
                 if (res.new === true) navigate("/usuarioNuevo");
         })
             .catch((e) => {

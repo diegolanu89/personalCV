@@ -3,7 +3,6 @@ import * as React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import NuevaFicha from './components/ficha/NuevaFicha';
-import Skill from './components/skill/Skill'
 
 import { Login } from './components/sesion/Login'
 import { Register } from './components/sesion/Register'
@@ -12,66 +11,67 @@ import { ProtectedRoute } from "./components/sesion/ProtectedRoute";
 import { Home } from './components/menu/Home';
 import Navegador from "./components/historia/Navegador";
 
+/*HISTORIA___________________________________________*/
+import HistoriaInterface from './interfaces/HistoriaInterface'
 
-import {info_jobs} from './assets/jobs.js'
-import {jobs_title} from './assets/jobs.js'
-import {jobs_index} from './assets/jobs.js'
+/*SILLS*/
 
-import ncr from './images/ncr.jpg';
-import cetek from './images/cetek.jpg';
-import accesorios from './images/accesorios.jpg';
-import tecnico from './images/tecnico.jpg';
+/*Educacion*/
 
-function  App () {
-      var img_jobs = [accesorios,tecnico,cetek,ncr]
-           
-            return (
-                  <div>
-                        <AuthProvider>
-                              <BrowserRouter>
-                                    <Routes>
-                                          <Route exact path="/" element={
-                                                <ProtectedRoute>
-                                                      <Home />
-                                                </ProtectedRoute>
-                                          } />
 
-                                          <Route path="/login" element={<Login />} />
 
-                                          <Route path="/register" element={<Register />} />
+function App() {
+     
 
-                                          <Route path="/skills" element={
-                                                <ProtectedRoute>
-                                                      <Skill />
-                                                </ProtectedRoute>
-                                          } />
+      return (
+            <div>
+                  <AuthProvider>
+                        <BrowserRouter>
+                              <Routes>
+                                    <Route exact path="/" element={
+                                          <ProtectedRoute>
+                                                <Home />
+                                          </ProtectedRoute>
+                                    } />
 
-                                          <Route path="/historia" element={
-                                                <ProtectedRoute>
-                                                      <Navegador types={jobs_index()} 
-                                                      tittles={jobs_title()}
-                                                      img={img_jobs}
-                                                      info_jobs={info_jobs()}
-                                                      />
-                                                </ProtectedRoute>
-                                          } />
+                                    <Route path="/login" element={<Login />} />
 
-                                          <Route path="/usuarioNuevo" element={
-                                                <ProtectedRoute>
-                                                      <NuevaFicha />
-                                                </ProtectedRoute>
-                                          } />
+                                    <Route path="/register" element={<Register />} />
 
-                                          
+                                    <Route path="/skills" element={
+                                          <ProtectedRoute>
+                                               
+                                          </ProtectedRoute>
+                                    } />
 
-                                    </Routes>
+                                    <Route path="/historia" element={
+                                          <ProtectedRoute>
+                                                <HistoriaInterface/>
+                                          </ProtectedRoute>
+                                    } />
 
-                              </BrowserRouter>
-                        </AuthProvider>
-                  </div>
+                                    <Route path="/educacion" element={
+                                          <ProtectedRoute>
+                                               
+                                          </ProtectedRoute>
+                                    } />
 
-            );
-      }
+                                    <Route path="/usuarioNuevo" element={
+                                          <ProtectedRoute>
+                                                <NuevaFicha />
+                                          </ProtectedRoute>
+                                    } />
+
+
+
+                              </Routes>
+
+                        </BrowserRouter>
+                  </AuthProvider>
+            </div>
+
+      );
+}
 
 
 export default App;

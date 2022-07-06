@@ -16,7 +16,7 @@ export function Salida({salida}){
 
    
 
-    return (<div className="salida_modal">
+    return (
                 
                 <div className="alert">
                     <div className="text_modal">Confirma que desea salir?</div>
@@ -24,10 +24,10 @@ export function Salida({salida}){
                     <button id="btn_verde" className="btn_sta" onClick={()=>salida()}>Cancelar</button>
                     <button id="btn_rojo"  className="btn_sta" onClick={()=>handleLogout()}>Salir</button>
                     </div>
-                </div>;
+                </div>
 
 
 
 
-    </div>);
+   );
 }
