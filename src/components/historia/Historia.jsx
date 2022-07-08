@@ -8,7 +8,6 @@ class Historia extends React.Component {
         super(props);
         this.state = {
             now: this.props.now,
-            explanation: "Lugares de Trabajo",
             loading: false,
             request: '',
         };
@@ -41,9 +40,9 @@ class Historia extends React.Component {
         var tittle = this.props.tittles
         var iconos = this.props.img
         for (var i = 0; i < types.length; i++) {
-            jobs.push(<button key={i} className='bot_h' id='cronica'
+            jobs.push(<button key={i} className='bot_h' id={this.props.skill_mode?"cronica_s":"cronica"}
                     onClick={this.mostrar_trabajo.bind(this, types[i])} >
-                        <img  id= "icono_h" alt="item" src={iconos[i]}></img>
+                        <img  id= {this.props.skill_mode?"icono_h_s":"icono_h"} alt="item" src={iconos[i]}></img>
                         <span>{tittle[i]}</span>
                     </button>);
         }
@@ -51,8 +50,8 @@ class Historia extends React.Component {
         return <div id="conteiner">
             <div id="background_interno">
                 <div id="filter_interno">
-            <div className="section_title_body">{this.state.explanation}</div>
-            <div className="section_history_body" >
+            <div className="section_title_body">{this.props.title}</div>
+            <div className={this.props.skill_mode?"section_history_skills":"section_history_body"} >
                 {jobs}
             </div>
             </div>

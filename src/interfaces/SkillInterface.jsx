@@ -1,12 +1,12 @@
 import Navegador from "../components/historia/Navegador";
-/*import { info_jobs } from '../assets/jobs.js'
-import { jobs_title } from '../assets/jobs.js'
-import { jobs_index } from '../assets/jobs.js'
+import { info_skills } from '../assets/skills.js'
+import { skills_title } from '../assets/skills.js'
+import { skills_index } from '../assets/skills.js'
 
-import ncr from '../images/ncr.jpg';
-import cetek from '../images/cetek.jpg';
-import accesorios from '../images/accesorios.jpg';
-import tecnico from '../images/tecnico.jpg';*/
+import javascript from '../images/javascript.png';
+import react from '../images/React.jpg';
+import angular from '../images/Angular.jpg';
+import java from '../images/Java.jpg';
 
 import React from "react";
 
@@ -22,13 +22,16 @@ class SkillInterface extends React.Component{
 
   render() {
 
-    //var img_jobs = [accesorios, tecnico, cetek, ncr]
+    var img_skills = [javascript, react, angular, java]
+
     return (
     
-      <Navegador types={[]}
-      tittles={[]}
-      img={[]}
-      info_jobs={[]}/>
+      <Navegador types={skills_index()}
+      title={"SKILLS"}
+      tittles={skills_title()}
+      img={img_skills}
+      skills={true}
+      info_jobs={info_skills()}/>
       )
     
     }

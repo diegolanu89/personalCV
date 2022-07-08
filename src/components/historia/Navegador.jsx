@@ -44,7 +44,7 @@ class Navegador extends React.Component {
                     </div>
                     :
                     <div className="section_bar_home ">
-                        <a onClick={() => this.clean()}>Volver </a> {" "}
+                        <button onClick={() => this.clean()}>Volver </button> {" "}
                     </div>
 
 
@@ -60,6 +60,8 @@ class Navegador extends React.Component {
                                 update_info={this.handle_get_info} 
                                 info_jobs={this.props.info_jobs}
                                 img ={this.props.img}
+                                title={this.props.title}
+                                skill_mode={this.props.skills?true:false}
                                 />
                             </div>
 

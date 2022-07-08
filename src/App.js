@@ -9,14 +9,10 @@ import { Register } from './components/sesion/Register'
 import { AuthProvider } from "./context/AuthContext";
 import { ProtectedRoute } from "./components/sesion/ProtectedRoute";
 import { Home } from './components/menu/Home';
-import Navegador from "./components/historia/Navegador";
 
-/*HISTORIA___________________________________________*/
 import HistoriaInterface from './interfaces/HistoriaInterface'
+import SkillInterface from './interfaces/SkillInterface'
 
-/*SILLS*/
-
-/*Educacion*/
 
 
 
@@ -40,7 +36,7 @@ function App() {
 
                                     <Route path="/skills" element={
                                           <ProtectedRoute>
-                                               
+                                               <SkillInterface/>
                                           </ProtectedRoute>
                                     } />
 
