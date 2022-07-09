@@ -3,10 +3,11 @@ import { info_skills } from '../assets/skills.js'
 import { skills_title } from '../assets/skills.js'
 import { skills_index } from '../assets/skills.js'
 
-import javascript from '../images/javascript.png';
-import react from '../images/React.jpg';
-import angular from '../images/Angular.jpg';
-import java from '../images/Java.jpg';
+import javascript from '../images/js.png';
+import react from '../images/react.png';
+import angular from '../images/angular.png';
+import java from '../images/java.png';
+import django from '../images/django.png';
 
 import React from "react";
 
@@ -22,7 +23,7 @@ class SkillInterface extends React.Component{
 
   render() {
 
-    var img_skills = [javascript, react, angular, java]
+    var img_skills = [javascript, react, angular, java,django]
 
     return (
     

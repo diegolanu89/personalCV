@@ -1,6 +1,6 @@
 import React from "react";
 import './SlideMenu.css'
-import arrow from './arrow_right.png';
+import hamb from './hamb.png';
 import { Link } from "react-router-dom";
 
 class SlideMenu extends React.Component {
@@ -29,9 +29,9 @@ class SlideMenu extends React.Component {
     var links = []
     for (let i = 0; i < references.length; i++) {
       if (texts[i] === "Volver") {
-        links.push(<div key={i} id='link_slide_first'><Link to={references[i]}>
-                        <img  id=  "icon_slide_arrow_inv" alt="item" src={arrow} onClick={() => this.desplegar()}></img>
-                  </Link> {" "}</div>)
+        links.push(<div key={i} id='link_slide_first'>
+                        <img  id=  "icon_slide_arrow_inv" alt="item" src={hamb} onClick={() => this.desplegar()}></img>
+                  </div>)
       } else
         links.push(<div key={i} id='link_slide'><Link to={references[i]}>{texts[i]}</Link> {" "}</div>)
     }
@@ -45,7 +45,7 @@ class SlideMenu extends React.Component {
         </div>
         :
         <div className="slide_oculto" onClick={() => this.desplegar()}>
-          <img id="icon_slide_arrow" alt="item" src={arrow} onClick={() => this.desplegar()}></img>
+          <img id="icon_slide_arrow" alt="item" src={hamb} onClick={() => this.desplegar()}></img>
         </div>
       }
     </div>;

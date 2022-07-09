@@ -42,7 +42,7 @@ class Historia extends React.Component {
         for (var i = 0; i < types.length; i++) {
             jobs.push(<button key={i} className='bot_h' id={this.props.skill_mode?"cronica_s":"cronica"}
                     onClick={this.mostrar_trabajo.bind(this, types[i])} >
-                        <img  id= {this.props.skill_mode?"icono_h_s":"icono_h"} alt="item" src={iconos[i]}></img>
+                        <div id="conteiner_img"><img  id= {this.props.skill_mode?"icono_h_s":"icono_h"} alt="item" src={iconos[i]}></img></div>
                         <span>{tittle[i]}</span>
                     </button>);
         }

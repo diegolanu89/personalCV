@@ -7,19 +7,15 @@ import CvServices from "../../services/CvServices";
 import { useNavigate } from "react-router-dom";
 import './Home.css'
 import Starting from "../modals/Starting";
-import SlideMenu from '../slides/SlideMenu'
+import NavBar from "../linkers/NavBar";
 
 export function Home() {
+
     const [starting, setStarting] = useState(true);
     const { logout, user } = useAuth();
     const navigate = useNavigate();
-    const handleLogout = async () => {
-        try {
-            await logout();
-        } catch (error) {
-            console.error(error.message);
-        }
-    };
+    
+    
 
     useEffect(() => {
         setTimeout(() => {
@@ -34,11 +30,6 @@ export function Home() {
             });
     });
 
-
-    const references = ['/play', '/navegadorDietas', '/skills', '/historia', '/editorRutinas', '/']
-    const texts = ['Contacto', 'Descargar CV PDF', 'Skills', 'Trabajos', 'Informacion Personal', 'Volver']
-
-
     return (
 
 
@@ -48,9 +39,10 @@ export function Home() {
                 <Starting />
                 :
                 <div id="conteiner">
-                    <div className="section_bar_home right" >
-                        <a href="#!" onClick={handleLogout}>Cerrar sesión</a>
-                    </div>
+                    <NavBar
+                        menu={true}
+                        logout={true}
+                    />
 
                     <div className="section_title_home ">
                         <span className="bolder large">Bienvenido</span> {user.displayName || user.email}
@@ -60,7 +52,7 @@ export function Home() {
                         <div id="filter">
                         <FirebaseAppProvider firebaseConfig={firebaseConfig}>
                             <Suspense fallback={<p>Cargando...</p>}>
-                                <SlideMenu links={references} texts={texts} />
+                                
                             </Suspense>
                         </FirebaseAppProvider>
                         </div>

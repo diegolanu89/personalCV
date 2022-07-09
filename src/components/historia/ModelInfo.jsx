@@ -1,6 +1,6 @@
 import React from "react";
 import './model_info.css';
-import arrow from '../slides/arrow_right.png';
+import arrow from '../../images/arrow_right.png';
 
 class ModelInfo extends React.Component {
 
@@ -61,7 +61,7 @@ class ModelInfo extends React.Component {
       <div className="info_input" id="ba" key="be">
         {this.props.request.before ?
           <button className="bt_j_l" onClick={this.handleChange.bind(this, this.props.request.before.toLowerCase(), false)}>
-            <img id="icon_slide_arrow_inv" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.before.toLowerCase(), false)}></img>
+            <img id="icon_slide_arrow_inv_p" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.before.toLowerCase(), false)}></img>
             <span id="sl"> {this.props.request.before}</span>
           </button>
           :
@@ -77,7 +77,7 @@ class ModelInfo extends React.Component {
           <button className="bt_j_r" onClick={this.handleChange.bind(this, this.props.request.after.toLowerCase(), true)}>
 
             <span id="sr"> {this.props.request.after} </span>
-            <img id="icon_slide_arrow" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.after.toLowerCase(), true)}></img>
+            <img id="icon_slide_arrow_p" alt="item" src={arrow} onClick={this.handleChange.bind(this, this.props.request.after.toLowerCase(), true)}></img>
           </button>
           :
           <button className="bt_j_r">

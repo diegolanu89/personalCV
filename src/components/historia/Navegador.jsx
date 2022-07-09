@@ -3,7 +3,8 @@ import './navegador.css';
 import Historia from './Historia';
 import ModelInfo from "./ModelInfo";
 import HistoriaBar from "./HistoriaBar";
-import { Link } from "react-router-dom";
+import NavBar from "../linkers/NavBar";
+
 class Navegador extends React.Component {
 
     constructor(props) {
@@ -39,15 +40,19 @@ class Navegador extends React.Component {
             <div id="conteiner">
 
                 {this.state.his ?
-                    <div className="section_bar_home ">
-                        <Link to="/">Home</Link> {" "}
-                    </div>
+                    <NavBar
+                        menu={true}
+                        home={true}
+                        logout={true}
+                        
+                    />
                     :
-                    <div className="section_bar_home ">
-                        <button onClick={() => this.clean()}>Volver </button> {" "}
-                    </div>
-
-
+                    <NavBar
+                        menu={true}
+                        home={true}
+                        logout={true}
+                        volver={() => this.clean()}
+                    />
                 }
 
                 <div className="section_home_body background" id="background_center">
