@@ -48,6 +48,8 @@ class Historia extends React.Component {
         }
 
         return <div id="conteiner">
+
+            
             <div id="background_interno">
                 <div id="filter_interno">
             <div className="section_title_body">{this.props.title}</div>
@@ -56,6 +58,8 @@ class Historia extends React.Component {
             </div>
             </div>
             </div>
+
+
         </div>;
 
     }

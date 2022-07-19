@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import './Home.css'
 import Starting from "../modals/Starting";
 import NavBar from "../linkers/NavBar";
+import InitInterface from "../../interfaces/InitInterface";
 
 export function Home() {
 
@@ -52,7 +53,7 @@ export function Home() {
                         <div id="filter">
                         <FirebaseAppProvider firebaseConfig={firebaseConfig}>
                             <Suspense fallback={<p>Cargando...</p>}>
-                                
+                                <InitInterface/>
                             </Suspense>
                         </FirebaseAppProvider>
                         </div>

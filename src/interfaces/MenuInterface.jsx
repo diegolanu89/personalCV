@@ -4,8 +4,8 @@ import SlideMenu from "../components/slides/SlideMenu";
 class Menunterface extends React.Component{
   render() {
 
-    const references = ['/play', '/navegadorDietas', '/skills', '/historia', '/editorRutinas', '/']
-    const texts = ['Contacto', 'Descargar CV PDF', 'Skills', 'Trabajos', 'Informacion Personal', 'Volver']
+    const references = ['/play', '/navegadorDietas', '/skills', '/historia', '/usuarioNuevo', '/']
+    const texts = ['Contacto', 'Descargar CV PDF', 'Skills', 'Trabajos', 'Cambiar Datos de usuario', 'Volver']
    
     return (
      
