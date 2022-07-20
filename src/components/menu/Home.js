@@ -49,7 +49,7 @@ export function Home() {
                         <span className="bolder large">Bienvenido</span> {user.displayName || user.email}
                     </div>
 
-                    <div className="section_home_body" id="background_center">
+                    <div className="section_init_body" id="background_center">
                         <div id="filter">
                         <FirebaseAppProvider firebaseConfig={firebaseConfig}>
                             <Suspense fallback={<p>Cargando...</p>}>

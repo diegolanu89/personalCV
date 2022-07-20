@@ -16,6 +16,7 @@
     justify-content: flex-end;
 
     padding: 0px;
+    box-shadow: 1px 1px 8px 1px #052800;
   }
 
   #link_bar_img{
