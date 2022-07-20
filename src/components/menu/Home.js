@@ -13,7 +13,7 @@ import InitInterface from "../../interfaces/InitInterface";
 export function Home() {
 
     const [starting, setStarting] = useState(true);
-    const { logout, user } = useAuth();
+    const { user } = useAuth();
     const navigate = useNavigate();
     
     

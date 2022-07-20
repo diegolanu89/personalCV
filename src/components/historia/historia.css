@@ -102,7 +102,7 @@
 
 #cronica_s {
   
-  left: 0px;
+  
     background: rgb(9,121,82);
     background: linear-gradient(90deg, rgba(9, 121, 82, 0) 5%, rgba(20, 182, 99, 0.75) 26%, rgb(0 212 255 / 51%) 100%);
     /* margin: 25px; */
@@ -113,14 +113,14 @@
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
     margin-bottom: 10px;
-    min-width: 350px;
-    max-width: 350px;
-    min-height: 120px;
+    min-width: 165px;
+    max-width: 200px;
+    min-height: 165px;
     color: white;
     font-size: 21px;
     margin-top: 10px;
@@ -133,6 +133,7 @@
     /* background-attachment: revert; */
     background-position: left;
     background-size: auto 1009px;
+    
 }
 
 #cronica:hover, #cronica_s:hover{
@@ -213,10 +214,10 @@
     min-height: 550px;
     /* height: 550px; */
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-content: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     animation: parpadeo 500ms linear 1;
     background: rgb(2 159 137 / 88%);
@@ -381,26 +382,27 @@
     }
 
     #cronica_s {
-      
-      /*background: linear-gradient(90deg, rgb(6 224 148 / 0%) 5%, rgb(20 182 99 / 0%) 26%, rgb(0 212 255 / 0%) 100%);*/
-      display: flex;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: white;
-      font-size: 21px;
-      margin-top: 10px;
-      margin: 10px;
-      /* border: 1px solid black; */
-      min-width: 124px;
-      min-height: 150px;
-      height: 258px;
-      width: 200px;
-      border-radius: 0px 0px 50px 47px;
-      padding: 0px;
-      transition: 0.2s;border: 1px grey solid;
+          /* background: linear-gradient(90deg, rgb(6 224 148 / 0%) 5%, rgb(20 182 99 / 0%) 26%, rgb(0 212 255 / 0%) 100%); */
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 21px;
+    margin-top: 10px;
+    margin: 10px;
+    /* border: 1px solid black; */
+    max-width: 350px;
+    min-width: 124px;
+    min-height: 150px;
+    height: 258px;
+    width: 200px;
+    border-radius: 0px 0px 50px 47px;
+    padding: 0px;
+    transition: 0.2s;
+    border: 1px grey solid;
       
     }
 

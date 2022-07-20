@@ -3,7 +3,7 @@ import React from "react";
 import login from '../../images/login.png';
 
 export function Logout() {
-    const { logout, user } = useAuth();
+    const { logout } = useAuth();
     
     const handleLogout = async () => {
         try {

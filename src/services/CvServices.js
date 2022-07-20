@@ -1,5 +1,6 @@
 import firebase from "../firebase.js";
-import { collection, getDoc, getDocs, setDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore/lite';
+//import { collection, getDoc, getDocs, setDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore/lite';
+import { getDoc, setDoc, doc, updateDoc } from 'firebase/firestore/lite';
 import { auth } from "../firebase";
 import { ficha_default } from '../defaults/ficha'
 

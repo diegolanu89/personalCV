@@ -1,7 +1,7 @@
 import React from "react";
 import './navinit.css';
 import '../menu/Home.css';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import ruta from '../../assets/CV2020.pdf';
 
