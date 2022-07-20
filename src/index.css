@@ -550,11 +550,12 @@ label,div{
   align-items: center;
   background-repeat: no-repeat;
   /* background-attachment: revert; */
-  background-position: center;
+  background-position: right;
   background-size: auto 1009px;
   overflow: hidden;
   border: 1px solid grey;
   border-radius: 20px;
+  box-shadow: 1px 1px 8px 1px black;
 }
 
 #filter_interno {

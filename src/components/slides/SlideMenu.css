@@ -108,6 +108,14 @@
     align-items: center;
     font-size: 20px;
     text-shadow: 1px 1px black;
+    background-image: url("../../images/vb768.jpg");
+    align-items: center;
+    background-repeat: no-repeat;
+    /* background-attachment: revert; */
+    background-position: left;
+    background-size: auto 1009px;
+    box-shadow: inset 323px 1px 42px 1px #31be83b3;
+    
 }
 
 #link_slide>a:hover {
