@@ -3,11 +3,11 @@ import React from 'react';
 export function Alert({ message }) {
     return (
       <div
-      id="alert_div"
-        
+        className="px-4 py-3 rounded relative mb-2 text-center"
         role="alert"
+        id="alert_msg"
       >
-        <span id="span_alert">{message}</span>
+        {message}
         {/* <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
           <svg
             class="fill-current h-6 w-6 text-red-500"
