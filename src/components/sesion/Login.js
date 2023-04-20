@@ -63,12 +63,13 @@ export function Login() {
       
 
       <div className="section_login_body">
-      <div className="logotipo">CV Diego Peyrano</div>
+      <div className="logotipo">TRAVELIT</div>
       {error && <Alert message={error} />}
         <form onSubmit={handleSubmit}>
           <div >
             <label htmlFor="email">Email</label>
             <div><input
+              className="input_login"
               type="email"
               name="email"
               id="email"
@@ -82,6 +83,7 @@ export function Login() {
             <label htmlFor="password" >Contraseña</label>
             <div>
               <input
+                className="input_login"
                 type="password"
                 name="password"
                 id="password"
@@ -96,20 +98,21 @@ export function Login() {
           </div>
 
           <div className="info_inicial right_info">
-            Regístrese por favor, para poder acceder y descargar la información completa actualizada en pdf o verla online. 
-              Muchas gracias. 
+           
           </div>
         </form>
        
       </div>
 
       
-
+      {false?
       <div className="section_login_body nav_login">
         <div><button className="login_button no_border " onClick={handleResetPassword}>Perdiste la contraseña?</button></div>
         <div><button className="login_button google" onClick={handleGoogleSignin}>Google login</button></div>
       </div>
+      :null}
 
+    {false? 
       <div className="section_login_body feet_login">
         
           <div>No tenés Cuenta?</div>
@@ -119,7 +122,7 @@ export function Login() {
             </Link>
           </div>
         
-      </div>
+      </div>:null}
       </div>
 
       <div id="info_web">

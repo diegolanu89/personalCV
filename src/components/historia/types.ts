@@ -5,4 +5,6 @@ export type DetailsJob = {
     descripcion: string
     icon: string
     small: boolean
+    links?: any
+    date: Date
 }

@@ -11,9 +11,10 @@ interface Props {
     title: string
     skill_mode: boolean
     info_pre: string[] | string
+    details?: string[] | string
 }
 
-const Historia: React.FC<Props> = ({ types, tittles, title, update_info, info_jobs, img, skill_mode, info_pre }) => {
+const Historia: React.FC<Props> = ({ types, tittles, title, update_info, info_jobs, img, skill_mode, info_pre, details }) => {
 
     const mostrar_trabajo = (value: string) => {
         var ws = require('../../assets/' + info_jobs)();
@@ -25,6 +26,8 @@ const Historia: React.FC<Props> = ({ types, tittles, title, update_info, info_jo
     let jobs = []
     var tittle = tittles
     var iconos = img
+    var isdetails = false
+    if (details !== undefined) isdetails = true
     for (var i = 0; i < types.length; i++) {
         let type_ = types[i]
         jobs.push(<button key={i} className='bot_h' id={skill_mode ? "cronica_s" : "cronica"} style={skill_mode ? { backgroundPosition: 'right' } : {}}
@@ -32,7 +35,7 @@ const Historia: React.FC<Props> = ({ types, tittles, title, update_info, info_jo
             <div id="conteiner_img"><img id={skill_mode ? "icono_h_s" : "icono_h"} alt="item" src={iconos[i]}></img></div>
             <span id="tittle_card">{tittle[i]}</span>
             <span id="descript_card">{skill_mode ? null : info_pre[i]}</span>
-            <span id="oc_card">{skill_mode ? null : info_pre[i]}</span>
+            <span id="oc_card">{skill_mode ? null : (isdetails ? details![i] : null)}</span>
         </button>);
     }
 

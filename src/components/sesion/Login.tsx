@@ -7,15 +7,15 @@ import { Alert } from "./Alert";
 import './Login.css'
 
 
-export const Login =()=> {
+export const Login = () => {
 
-  const [email,setEmail] = useState('')
-  const [pass,setPass] = useState('')
+  const [email, setEmail] = useState('')
+  const [pass, setPass] = useState('')
   const { login, loginWithGoogle, resetPassword } = useAuth();
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
     try {
@@ -23,10 +23,10 @@ export const Login =()=> {
       navigate("/");
     } catch (error) {
       var er = error as any
-      if(er.message.substr(22,14) === 'user-not-found')
+      if (er.message.substr(22, 14) === 'user-not-found')
         setError('No existe el usuario ingresado');
       else
-        setError(er.message.substr(10,100));
+        setError(er.message.substr(10, 100));
     }
   };
 
@@ -36,12 +36,12 @@ export const Login =()=> {
       await loginWithGoogle();
       navigate("/");
     } catch (error) {
-      var er=error as any
-      setError(er.message.substr(10,100));
+      var er = error as any
+      setError(er.message.substr(10, 100));
     }
   };
 
-  const handleResetPassword = async (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleResetPassword = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     if (!email) return setError("Escribe un email para resetear contraseña");
     try {
@@ -51,8 +51,8 @@ export const Login =()=> {
         navigate("/");
       }, 5500)
     } catch (error) {
-        var er = error as any
-        setError(er.message.substr(10,100));
+      var er = error as any
+      setError(er.message.substr(10, 100));
     }
   };
 
@@ -61,51 +61,51 @@ export const Login =()=> {
       Iniciar Sesión
     </div>
 
-      <div className="section_center">
-        <div className="rdiet_c"></div>
+    <div className="section_center">
+      <div className="rdiet_c"></div>
 
       {error && <Alert message={error} />}
-        <form onSubmit={e=>handleSubmit(e)}>
-          <div >
-            <label htmlFor="email">Email</label>
-            <div><input
-              type="email"
-              name="email"
-              id="email"
+      <form onSubmit={e => handleSubmit(e)}>
+        <div >
+          <label htmlFor="email">Email</label>
+          <div><input
+            type="email"
+            name="email"
+            id="email"
+            className="form_label"
+            onChange={e => setEmail(e.target.value)}
+            placeholder="tuemail@company.com"
+          />
+          </div>
+        </div>
+
+        <div >
+          <label htmlFor="password" >Contraseña</label>
+          <div>
+            <input
+              type="password"
+              name="password"
+              id="password"
               className="form_label"
-              onChange={e => setEmail(e.target.value)}
-              placeholder="tuemail@company.com"
+              onChange={e => setPass(e.target.value)}
+              placeholder="*************"
             />
-            </div>
           </div>
+        </div>
 
-          <div >
-            <label htmlFor="password" >Contraseña</label>
-            <div>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                className="form_label"
-                onChange={e => setPass(e.target.value)}
-                placeholder="*************"
-              />
-            </div>
-          </div>
-
-          <div className="center_flex">
-            <button className="bt_border" type="submit">Iniciar Sesión</button>
-          </div>
-        </form>
-      </div>
-
-      <div className="section_bottom">
-          <div><button className="bt_border" onClick={e=>handleResetPassword(e)}>Perdiste la contraseña?</button></div>
-          <div><button className="bt_border" onClick={e=>handleGoogleSignin()}>Google login</button></div>
-          <div className="link_esp">No tenés Cuenta? <Link to="/register" >Registrate</Link></div>
-      </div>
+        <div className="center_flex">
+          <button className="bt_border" type="submit">Iniciar Sesión</button>
+        </div>
+      </form>
     </div>
-  
+
+    <div className="section_bottom">
+      <div><button className="bt_border" onClick={e => handleResetPassword(e)}>Perdiste la contraseña?</button></div>
+      <div><button className="bt_border" onClick={e => handleGoogleSignin()}>Google login</button></div>
+      {false ? <div className="link_esp">No tenés Cuenta? <Link to="/register" >Registrate</Link></div> : null}
+    </div>
+  </div>
+
 }
 
 export default Login;

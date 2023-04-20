@@ -110,7 +110,7 @@
   background: rgb(83 87 92 / 47%);
   /* margin: 25px; */
   /* border: 1px solid white; */
-  height: 145px;
+  height: auto;
   border: none;
   /* box-shadow: inset 161px 1px 20px 1px var(--blue); */
   border-radius: 10px;

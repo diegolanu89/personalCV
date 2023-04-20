@@ -3,7 +3,7 @@ import './navinit.css';
 import '../menu/Home.css';
 import { Link } from "react-router-dom";
 
-import ruta from '../../assets/CV2020.pdf';
+//import ruta from '../../assets/CV2020.pdf';
 
 class NavInit extends React.Component {
 
@@ -42,7 +42,38 @@ class NavInit extends React.Component {
                 <div id="filter_interno_init">
                     <div className="section_init_body" >
 
-                        <div id="cronica_init" style={{ backgroundPosition: 'right' }}>
+                        
+
+                        <div id="cronica_init" style={{ backgroundPosition: 'center' }}>
+                            <div id="filter_note_2">
+                                <div className="conteiner_icons">
+                                    {iconos_render}
+                                </div>
+                                    
+                            </div>
+                        </div>
+
+                        
+
+                        
+
+                        
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>;
+
+    }
+}
+
+/*
+<div id="cronica_init" style={{ backgroundPosition: 'right' }}>
                             <div id="filter_note_1">
                                 <div className="placa_1">
                                     <div className="img_per">
@@ -59,12 +90,10 @@ class NavInit extends React.Component {
                             </div>
                         </div>
 
-                        <div id="cronica_init" style={{ backgroundPosition: 'center' }}>
-                            <div id="filter_note_2">
-                                <div className="conteiner_icons">
-                                    {iconos_render}
-                                </div>
-                                    
+                        <div id="cronica_init" style={{ backgroundPosition: 'left' }}>
+                            <div id="filter_note_1">
+                                <div id="conteiner_img"></div>
+                                <span></span>
                             </div>
                         </div>
 
@@ -87,27 +116,6 @@ class NavInit extends React.Component {
                                 </div>
                             </div>
                         </div>
-
-                        
-
-                        <div id="cronica_init" style={{ backgroundPosition: 'left' }}>
-                            <div id="filter_note_1">
-                                <div id="conteiner_img"></div>
-                                <span></span>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>;
-
-    }
-}
+*/
 
 export default NavInit;

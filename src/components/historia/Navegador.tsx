@@ -14,9 +14,10 @@ interface Props {
     skills: boolean
     info_jobs: string[] | string
     info_pre: string[] | string
+    details?: string[] | string
 }
 
-const Navegador: React.FC<Props> = ({ types, title, tittles, img, skills, info_jobs, info_pre }) => {
+const Navegador: React.FC<Props> = ({ types, title, tittles, img, skills, info_jobs, info_pre, details }) => {
 
     const [response, setResponse] = useState<any>(null);
     const [his, setHis] = useState<boolean>(true);
@@ -60,6 +61,7 @@ const Navegador: React.FC<Props> = ({ types, title, tittles, img, skills, info_j
                     title={title}
                     skill_mode={skills ? true : false}
                     info_pre={info_pre}
+                    details={details}
                 />
             </div>
             : null}

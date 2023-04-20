@@ -56,7 +56,6 @@
   margin-bottom: 15px;
   box-shadow: 0px 0px 2px 2px rgb(255 255 255 / 30%);
   font-family: Roboto;
-  font-weight: bolder;
   animation: parpadeo 1500ms linear 1;
   text-align: center;
   display: flex;
@@ -64,6 +63,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: stretch;
+  color: white;
 }
 
 .login_button {
@@ -76,6 +76,7 @@
   font-family: 'Roboto';
   background: none;
   border: none;
+  margin-top: 15px;
 }
 
 .no_border {
@@ -190,15 +191,17 @@
 
 
 .sig_in {
-  background-color: rgb(70 124 194);
-  width: 150px;
+  background-color: none;
+  width: 100%;
   font-size: 18px;
-  font-weight: bolder;
-  color: white;
+  color: var(--cyan);
   text-shadow: 0em 0.1em #333;
+  margin-top: 61px;
+  border: 1px solid var(--cyan);
 }
 
 .section_login_body>form {
+  margin-top: 20px;
   text-align: center;
 }
 

@@ -8,6 +8,7 @@ import { ProtectedRoute } from "./components/sesion/ProtectedRoute";
 import { Home } from './components/menu/Home';
 import HistoriaInterface from './interfaces/HistoriaInterface'
 import SkillInterface from './interfaces/SkillInterface'
+import TravelInterface from "./interfaces/TravelsInterface";
 
 
 function App() {
@@ -40,9 +41,9 @@ function App() {
                                           </ProtectedRoute>
                                     } />
 
-                                    <Route path="/educacion" element={
+                                    <Route path="/travels" element={
                                           <ProtectedRoute>
-
+                                                <TravelInterface />
                                           </ProtectedRoute>
                                     } />
 

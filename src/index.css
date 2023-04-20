@@ -564,7 +564,11 @@ button:active {
 
 label,
 div {
-  color: white;
+  text-align: left;
+}
+
+label {
+  color: grey
 }
 
 .link_esp {
@@ -876,7 +880,7 @@ div {
   background-image: url('./images/materials/baseline_file_download_done_black_24dp.png');
   background-size: contain;
   background-repeat: no-repeat;
-  filter: invert(1);
+  filter: invert(0);
   width: 24px;
   height: 24px;
 }
@@ -1144,6 +1148,168 @@ div {
   height: 48px;
 }
 
+/**/
+
+.bakery {
+  background-image: url('./images/materials/baseline_bakery_dining_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.flight_down {
+  background-image: url('./images/materials/baseline_flight_land_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.flight_up {
+  background-image: url('./images/materials/baseline_flight_takeoff_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.image_black {
+  background-image: url('./images/materials/baseline_image_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.city {
+  background-image: url('./images/materials/baseline_location_city_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.lunch {
+  background-image: url('./images/materials/baseline_lunch_dining_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.restaurant {
+  background-image: url('./images/materials/baseline_restaurant_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.train {
+  background-image: url('./images/materials/baseline_train_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.bus {
+  background-image: url('./images/materials/baseline_directions_bus_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.airbnb {
+  background-image: url('./images/materials/baseline_other_houses_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.barco {
+  background-image: url('./images/materials/baseline_directions_boat_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.walk {
+  background-image: url('./images/materials/baseline_directions_walk_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.france {
+  background-image: url('./images/france.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.holanda {
+  background-image: url('./images/holanda.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.alemania {
+  background-image: url('./images/alemania.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.roma {
+  background-image: url('./images/roma.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.nerja {
+  background-image: url('./images/nerja.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.madrid {
+  background-image: url('./images/madrid.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.helado {
+  background-image: url('./images/materials/icecream_FILL0_wght400_GRAD0_opsz48.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.card {
+  background-image: url('./images/materials/baseline_payment_black_48dp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
 /**_________________ICONS JOBS______________________________*/
 
 .ncr {
@@ -1178,4 +1344,18 @@ div {
   width: 48px;
   height: 48px;
   background-size: cover;
+}
+
+/*==================INPUT LOGINS==========================*/
+
+.input_login {
+  width: 250px;
+  color: var(--cyan);
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid var(--cyan);
+  background: transparent;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
 }

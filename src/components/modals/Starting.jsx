@@ -18,7 +18,7 @@ class Starting extends React.Component {
         return <div className="starting">
            
             <div className="logotipo">
-                    CV DIEGO PEYRANO
+                    TRAVELIT
                 </div>
         </div>
     }

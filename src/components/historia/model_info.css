@@ -107,7 +107,7 @@
   font-family: Acumin;
   width: 100%;
   max-width: 700px;
-  color: var(--cyan);
+  color: white;
   /* background: rgb(88 161 81 / 70%) 26%; */
   display: flex;
   flex-direction: column;
@@ -422,7 +422,7 @@
     /* background: linear-gradient( 4deg , rgb(0 0 0) 5%, rgb(1 28 14) 26%, rgb(0 212 255 / 12%) 100%); */
     font-size: 20px;
     font-family: Acumin;
-    color: var(--cyan);
+    color: white;
     width: 100%;
     max-width: 1024px;
     /*background: rgb(132 185 126) 26%;*/

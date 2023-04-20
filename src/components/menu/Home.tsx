@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import Starting from "../modals/Starting";
 import NavBar from "../linkers/NavBar";
 import { User } from '../../api/types'
+import InitInterfaceTravelit from "../../interfaces/InitInterfaceTravelit";
 
 
 export const Home = () => {
@@ -49,6 +50,8 @@ export const Home = () => {
                 <div className="section_center_total">
                     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
                         <Suspense fallback={<p>Cargando...</p>}>
+
+                            <InitInterfaceTravelit />
 
                         </Suspense>
                     </FirebaseAppProvider>

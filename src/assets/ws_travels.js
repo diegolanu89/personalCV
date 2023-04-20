@@ -1,170 +1,599 @@
 module.exports = function() {
     var request = {}
     return {
-        técnico:function(){
-            request.info = 'Mantenimiento y reparación de bienes informáticos';
-            request.fecha_inicial = '03/2009';
+        paris:function(){
+            request.info = 'Primer país que visitamos';
+            request.fecha_inicial = '22/04';
             request.fecha_final = '06/2017';
             request.before = false;
-            request.after = 'Accesorios';
-            request.titulo = 'Técnico Informático';
+            request.after = 'Holanda';
+            request.titulo = 'Paris';
             request.cargo = 'Técnico';
-            request.descripcion = [{'titulo':'Técnico','subtitulo':'Técnico Informatico freelance','descripcion':'','icon':'tecnico','small':true},
-            {'titulo':'Tareas Realizadas',
-                                    'subtitulo':'Frontend y Backend',
-                                    'descripcion':'Mantenimiento y reparación de bienes informáticos freelance. Se recurria a domicilios o los clientes acercaban sos productos a reparar.',
-                                    'icon':'verified',
-                                    'small':false},];
+            request.descripcion = [{'titulo':'Francia','subtitulo':'187 Rue Saint-Denis, París, Isla de Francia 75002','descripcion':'','icon':'france','small':true},
+                                    {'titulo':'Arribo',
+                                    'links':[{'text':'Tickets','link':'https://wwws.airfrance.fr/en/trip/trip-details?id=de70f119-b796-4a42-9d15-7f1e33cc0eea'}],
+                                    'subtitulo':'Aeropuerto Paris',
+                                    'descripcion':'Ver detalles del vuelo',
+                                    'icon':'flight_down',
+                                    'small':true,
+                                    'date':new Date('Sat Apr 22 2023 17:55:00 GMT+0200')},
+                                
+                                    {'titulo':'Traslado',
+                                    'links':[{'text':'Opciones','link':'https://www.france-hotel-guide.com/es/blog/cdg-al-centro-de-paris/#:~:text=1)%20RER%20B%20(el%20tren%20de%20las%20afueras%20de%20Par%C3%ADs)&text=Si%20est%C3%A1n%20en%20el%20terminal,se%20encuentran%20en%20el%20terminal.'}],
+                                    'subtitulo':'',
+                                    'descripcion':'Ver Opciones de traslado',
+                                    'icon':'bus',
+                                    'small':true,
+                                    'date':new Date('Sat Apr 22 2023 17:55:00 GMT+0200')},
+
+                                    {'titulo':'Hospedaje',
+                                    'links':[{'text':'Airbnb','link':'https://www.airbnb.com.ar/trips/v1/47644f6b-d817-44b8-9269-6c5e05724c98/ro/RESERVATION_USER_CHECKIN/HMMNANE8DB'}],
+                                    'subtitulo':'',
+                                    'descripcion':'',
+                                    'icon':'airbnb',
+                                    'small':true,
+                                    'date':new Date('Sat Apr 22 2023 19:55:00 GMT+0200')},
+
+                                    {'titulo':'Torre Eiffel Nocturna',
+                                    'links':[],
+                                    'subtitulo':'',
+                                    'descripcion':'Conseguir Insumos y trasladarse a la Torre para verla de Noche',
+                                    'icon':'city',
+                                    'small':true,
+                                    'date':new Date('Sat Apr 22 2023 21:55:00 GMT+0200')},
+
+                                    {'titulo':'Luvre',
+                                    'links':[{'text':'Entradas','link':'https://drive.google.com/file/d/1vTHXnSlG0G8SgX1M875RI5-2KTaLpEsd/view?usp=share_link'},
+                                             {'text':'AudioGuía','link':'https://drive.google.com/file/d/19Y_ZQBndvObLwH2RgbJ6Yl6ahnWFrOlK/view?usp=share_link'},
+                                             {'text':'Recomendaciones','link':'https://www.elviajedesofi.com/que-ver-en-el-louvre-en-dos-horas-20-obras-que-no-te-puedes-perder/'}],
+                                    'subtitulo':'Visita al muse de Luvre',
+                                    'descripcion':'Entradas por HelloTickets',
+                                    'icon':'city',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 23 2023 10:00:00 GMT+0200')},
+
+                                    {'titulo':'Recorrido hasta Triomphe',
+                                    'links':[],
+                                    'subtitulo':'',
+                                    'descripcion':'Jardin des Tulleries , Place de la Concorde, Jardins des Champs Élysées, Arc de Triomphe (10 a 23hs)',
+                                    'icon':'walk',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 23 2023 12:35:00 GMT+0200')},
+
+                                    {'titulo':'Torre Eiffel',
+                                    'links':[],
+                                    'subtitulo':'',
+                                    'descripcion':'Entrada Cima con Escaleras + Ascensor: $43//Entrada Cima Ascensor: $56, 60',
+                                    'icon':'city',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 23 2023 15:35:00 GMT+0200')},
+
+                                    {'titulo':'Excursion bateau Sena',
+                                    'links':[{'text':'Voucher','link':'https://drive.google.com/file/d/16Lo_Dud3IWwD6ZtgwdwzsJb9BTxw1q3E/view'}],
+                                    'subtitulo':'',
+                                    'descripcion':'',
+                                    'icon':'barco',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 23 2023 19:00:00 GMT+0200')},
+
+                                    {'titulo':'L’Opera Garnier',
+                                    'links':[{'text':'Voucher 1','link':'https://drive.google.com/file/d/1Z-SU9oXYVS_qhPazWlBr6aMnCZNjV42P/view?usp=share_link'},
+                                             {'text':'Voucher 2','link':'https://drive.google.com/file/d/1LJOf66R8-spTCcFxUbT1W8VWCX498EUf/view?usp=share_link'}],
+                                    'subtitulo':'',
+                                    'descripcion':'',
+                                    'icon':'city',
+                                    'small':true,
+                                    'date':new Date('Mon Apr 24 2023 10:00:00 GMT+0200')},
+
+                                    {'titulo':'Galerias Lafayette',
+                                    'links':[],
+                                    'subtitulo':'',
+                                    'descripcion':'A la vuelta del teatro Garnier',
+                                    'icon':'city',
+                                    'small':true,
+                                    'date':new Date('Mon Apr 24 2023 11:00:00 GMT+0200')},
+
+                                    {'titulo':'Free Tour Montmarte y sagrado corazón',
+                                    'links':[{'text':'GuruWalk','link':'https://www.guruwalk.com/es/walks/37446-free-tour-montmartre-y-sagrado-corazon'}],
+                                    'subtitulo':'',
+                                    'descripcion':'',
+                                    'icon':'walk',
+                                    'small':true,
+                                    'date':new Date('Mon Apr 24 2023 16:30:00 GMT+0200')},
+
+                                    {'titulo':'Le Marie',
+                                    'links':[],
+                                    'subtitulo':'',
+                                    'descripcion':'Vuelta al hospedaje. Podríamos ir a comer a Le Marais (barrio judío) recomendado: L’AS du Fallafel 34 Rue des Rosiers, 75004 Paris, Francia (15 cuadras del lugar de hospedaje)',
+                                    'icon':'lunch',
+                                    'small':true,
+                                    'date':new Date('Mon Apr 24 2023 19:40:00 GMT+0200')},
+
+                                    {'titulo':'Versalles',
+                                    'links':[{'text':'Opcion 1','link':'https://goo.gl/maps/ZQRP2rdkDRkxk2137'},
+                                    {'text':'Opcion 2','link':'https://goo.gl/maps/tEfa2KQnRcyQ9Dam9'}],
+                                    'subtitulo':'',
+                                    'descripcion':'La entrada se puede comprar desde la página de internet del Chateau Versailles, o se puede sacar directamente en la boletería del Palacio, quizá nos conviene sacar ese día porque es más barato sacar ahí y si llegamos temprano no creo que haya tanta cola. Ticker Zona 4',
+                                    'icon':'image_black',
+                                    'small':true,
+                                    'date':new Date('Tue Apr 25 2023 08:00:00 GMT+0200')},
+
+                                    {'titulo':'Recorrido Barrio Latino',
+                                    'links':[],
+                                    'subtitulo':'',
+                                    'descripcion':'Le jardin du Luxembourg, Fuente Medici, Panteon , Universidad Pierre Marie Curie, La Sorbona, Eglise de Saint Severin, Notre Dame, Sainte-Chapelle (cúpula $11), La conciergerie (9:30 a 17:00hs). ' + 
+                                    '* Restaurant recomendado : Au p’tit Grec 68 Rue Mouffetard, 75005 Paris, Francia. ',
+                                    'icon':'walk',
+                                    'small':true,
+                                    'date':new Date('Tue Apr 25 2023 14:00:00 GMT+0200')},
+
+                                    {'titulo':'Traslado a Eidhoven',
+                                    'links':[{'text':'Tickets','link':'https://drive.google.com/file/d/1rsOfKRphuniW4R9LW3P3dUO-PT2pPXBb/view?usp=share_link'}],
+                                    'subtitulo':'',
+                                    'descripcion':'Autobús 822 en dirección Arnhem - FlixBus Shop Paris, Parc de Bercy, 75012 Paris, Francia',
+                                    'icon':'bus',
+                                    'small':true,
+                                    'date':new Date('Wed Apr 26 2023 11:30:00 GMT+0200')},
+
+                                    {'titulo':'Tips',
+                                    'links':[],
+                                    'subtitulo':'',
+                                    'descripcion':'* WIFI PARIS: te permite encontrar estos puntos libres de acceso para que puedas consultar tus mails o utilizar tus redes sociales. ' + 
+                                    '* TOALETS: La falta de baños públicos en Paris es realmente sorprendente para una ciudad que recibe tantos turistas así que no dudes en bajarla. ' + 
+                                    '* LOUVRE: Puedes bajar esta aplicación para preparar tu visita al museo del louvre. Más de 3 horas de audioguías fueron creadas para facilitarte el recorrido dentro del museo. ' + 
+                                    '* MOOVIT: para transportes públicos. ' + 
+                                    '* FRAND PRIX hasta las 10:00 pm. ' + 
+                                    '* METRO de 5.00 am hasta 1:15/2:15 findes.',
+                                    'icon':'done',
+                                    'small':true,
+                                    'date':new Date('Wed Apr 26 2023 12:00:00 GMT+0200')},
+                                ];
             request.info_tec = false;
             request.tecnologias = false;
             return request
         },
-        accesorios:function(){
-            request.info = 'Creación de web para la venta de accesorios automotrices. Venta de equipos de iluminación y respuestos. Administración de cartilla de clientes.'
+        holanda:function(){
+            request.info = 'Nos trasladamos a la casa de Paula  & Andre.'
             request.fecha_inicial = '03/2011';
             request.fecha_final = '06/2017';
-            request.before = 'Técnico';
-            request.after = 'Cetek';
-            request.titulo = 'Accesorios Sur';
+            request.before = 'Paris';
+            request.after = 'Berlin';
+            request.titulo = 'Holanda';
             request.cargo = 'Técnico';
-            request.descripcion = [{'titulo':'Accesorios Sur','subtitulo':'Desarrollador y vendedor','descripcion':'','icon':'accesorios','small':true},
-                                    {'titulo':'Tareas Realizadas',
-                                    'subtitulo':'Frontend y Backend',
-                                    'descripcion':'Se utilizó una aplicación de angular para administar el sotck y mostrar en la web el catálogo de productos.Se vendían productos de iluminación y ópticas para autos de manera personalizada o a través de la web.',
-                                    'icon':'verified',
-                                    'small':false},];
+            request.descripcion = [
+                                    {'titulo':'Holanda','subtitulo':'Casa de Paula y Andre','descripcion':'','icon':'holanda','small':true},
+
+                                    {'titulo':'Llegada a Eindhoven',
+                                    'subtitulo':'John F Kennedylaan',
+                                    'descripcion':'Nos van a buscar a la terminal o nos darán indicaciones.',
+                                    'icon':'bus',
+                                    'small':false,
+                                    'date':new Date('Wed Apr 26 2023 18:45:00 GMT+0200')},
+
+                                    {'titulo':'Salida',
+                                    'links':[{'text':'Tickets','link':'https://www.klm.com.ar/trip/trip-details?id=9cfe6fb3-0a92-48b1-9c93-460c58f35f95'}],
+                                    'subtitulo':'Aeropuerto Amsterdam Reserva:28U7XZ ',
+                                    'descripcion':'KLM CheckIn:Sábado 28 de abril desde las 4:15',
+                                    'icon':'flight_up',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 30 2023 10:15:00 GMT+0200')},
+
+                                    ];
             request.info_tec = 'Se utilizó una aplicación de angular para administar el sotck y mostrar en la web el catálogo de productos. ';
-            request.tecnologias = 'angular,hmtl,npm,git,css';
+            //request.tecnologias = 'angular,hmtl,npm,git,css';
             return request
         },
-        cetek:function(){
-            request.info = 'Desarrollo de programas vinculados al entorno educativo y Learning Analytics';
+        berlin:function(){
+            request.info = 'Tercer Destino Berlin';
             request.fecha_inicial = '20/08/2017';
             request.fecha_final = '05/08/2019';
-            request.before = 'Accesorios';
-            request.after = 'Ncr';
-            request.titulo = 'Cetek';
+            request.before = 'Holanda';
+            request.after = 'Roma';
+            request.titulo = 'Berlin';
             request.cargo = 'Desarrollador';
-            request.descripcion = [{'titulo':'Cetek','subtitulo':'Desarrollador Fullstack','descripcion':'','icon':'cetek','small':true},
-                                    {'titulo':'Tareas Realizadas',
-                                   'subtitulo':'Frontend y Backend',
-                                   'descripcion':'Se implementaron soluciones orientadas a la educación a distancia y aprender de los datos de los alumnos en las cursadas. Se minaban datos y se realizaba webscrapping desde la pagina del campus de los alumnos y se administraban con una base de datos Mongo desde el cual se consultaban desde otros desarrollos orientados al monitoreo y tareas de learning analytics.',
-                                   'icon':'verified',
-                                   'small':false},
-                                    {'titulo':'Tecnologías Utilizadas',
-                                   'subtitulo':'Frontend y Backend',
-                                   'descripcion':'Se realizaron diferentes soluciones de front con React. Se gestionaban las tareas con trello. El código se ordenaba con dependencias de npm y git. Backend con pymongo(python y mongo). Se realizaron tareas de maching learning con python y tensor flow.',
-                                   'icon':'schema',
-                                   'small':false},
-                                   {'titulo':'Ambientes',
-                                   'subtitulo':'Entorno Linux Ubuntu',
-                                   'descripcion':'', 
-                                   'icon':'component',
-                                   'small':true},
-                                   {'titulo':'Clientes',
-                                   'subtitulo':'Implementaciones para los alumnnos de educación a distancia de la facultad.',
+            request.descripcion = [
+                                    {'titulo':'Berlin','subtitulo':'Rodenbergstraße 8, 10439 Berlin, Alemania','descripcion':'','icon':'alemania','small':true},
+                                    
+                                    {'titulo':'Arribo',
+                                   'subtitulo':'Berlin Brandenburg Airport',
                                    'descripcion':'',
-                                   'icon':'work',
-                                   'small':true}];
+                                   'icon':'flight_down',
+                                   'small':false,
+                                   'date':new Date('Sun Apr 30 2023 11:30:00 GMT+0200')},
+
+                                   {'titulo':'Welcome Card',
+                                   'links':[{'text':'Link','link':'https://drive.google.com/file/d/12kJ_IIvWoAkkLYjz5h0VC-r1kWl7h2yk/view?usp=share_link'}],
+                                   'subtitulo':'Retirar Welcome card',
+                                   'descripcion':'',
+                                   'icon':'card',
+                                   'small':false,
+                                   'date':new Date('Sun Apr 30 2023 12:00:00 GMT+0200')},
+
+                                   {'titulo':'Traslado',
+                                    'links':[{'text':'Indicaciones','link':'https://www.google.com/maps/dir/BER+Airport+%E2%80%93+Terminal+1-2,+Melli-Beese-Ring,+12529+Sch%C3%B6nefeld,+Alemania/8+Rodenbergstra%C3%9Fe,+Berl%C3%ADn+10439,+Alemania/@52.4562182,13.3531106,11z/data=!4m14!4m13!1m5!1m1!1s0x47a846d6ec03c211:0x8fe4806071dbb604!2m2!1d13.5126093!2d52.363446!1m5!1m1!1s0x47a85206425de69b:0xb0df4f1ca7f1e069!2m2!1d13.4158492!2d52.5508817!3e3'}],
+                                    'subtitulo':'Este primer traslado debemos comprar los tickets',
+                                    'descripcion':'Ver Opciones de traslado',
+                                    'icon':'train',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 30 2023 12:15:00 GMT+0200')},
+
+                                    {'titulo':'Hospedaje',
+                                    'links':[{'text':'Indicaciones','link':'https://www.airbnb.com.ar/trips/v1/a260520a-f728-4706-a6a6-4ec6989d1c08/ro/RESERVATION_USER_CHECKIN/HMTDZ5QBBB'}],
+                                    'subtitulo':'Rodenbergstraße 8, 10439 Berlin, Alemania',
+                                    'descripcion':'Airbnb',
+                                    'icon':'airbnb',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 30 2023 13:30:00 GMT+0200')},
+
+                                    {'titulo':'Recorrido al corazon de Berlin',
+                                    'links':[{'text':'GuruWalk','link':'https://www.guruwalk.com/es/vx9dk4c7gx537sfj34dr/messages/received/1987198?'}],
+                                    'subtitulo':'Recorrido acompañado de guías en español',
+                                    'descripcion':'Puerta del Ayuntamiento Rojo, justo a la salida de la estación "Rotes Rathaus"muy cerca de Alexander Platz con paraguas BLANCO',
+                                    'icon':'walk',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 30 2023 15:30:00 GMT+0200')},
+
+                                    {'titulo':'Museo de la guerra fría',
+                                    'links':[{'text':'Como llegar','link':'https://goo.gl/maps/Gh95kBLkMXn6G7gP9'}],
+                                    'subtitulo':'',
+                                    'descripcion':'',
+                                    'icon':'city',
+                                    'small':true,
+                                    'date':new Date('Sun Apr 30 2023 19:30:00 GMT+0200')},
+
+                                    {'titulo':'Recorrido a Sachsenhausen',
+                                    'links':[{'text':'GuruWalk','link':'https://www.guruwalk.com/es/vx9dk4c7gx537sfj34dr/messages/received/1987198?'}],
+                                    'subtitulo':'Recorrido al campo de concentración con guías en español',
+                                    'descripcion':'Puerta del Ayuntamiento Rojo,  justo a la salida de la estación "Rotes Rathaus" y vamos juntos hasta el Campo llevamos un paraguas BLANCO. ' +
+                                    'Recuerda que para el tour necesitarás un ticket de transporte de las zonas ABC y es recomendable traer algo de comer y de beber.' + 
+                                    'El ticket se puede comprar en cualquier estación de metro y/o tren o en la app BVG Tickets.',
+                                    'icon':'walk',
+                                    'small':true,
+                                    'date':new Date('Mon May 1 2023 10:00:00 GMT+0200')},
+                                    
+                                    {'titulo':'360° - Berliner Fernsehturm',
+                                    'links':[{'text':'Como llegar','link':'https://goo.gl/maps/FXSoT9FRHseaPMcz7'}],
+                                    'subtitulo':'Visita a la torre',
+                                    'descripcion':'Luego de esta actividad quedamos libres por la tarde',
+                                    'icon':'city',
+                                    'small':true,
+                                    'date':new Date('Mon May 1 2023 17:30:00 GMT+0200')},
+
+                                    {'titulo':'Postdam',
+                                    'links':[{'text':'Guía','link':'https://misindromeviajero.com/que-ver-potsdam/'},
+                                            {'text':'Como llegar','link':'https://drive.google.com/file/d/1OLuhTwzSDJ8dh4MXhII7cjUah6dpv_Hk/view?usp=share_link'},
+                                            {'text':'Pagina Entradas','link':'https://www.berlin-welcomecard.de/es/socio/sanssouci'}],
+                                    'subtitulo':'Visita al pueblo de Postdam y sus castillos',
+                                    'descripcion':'Partimos a la mañana temprano y nos trasladamos en transporte público',
+                                    'icon':'walk',
+                                    'small':true,
+                                    'date':new Date('Tue May 2 2023 9:30:00 GMT+0200')},
+                                   
+                                    {'titulo':'Parlamento',
+                                    'links':[{'text':'Permiso de entrada','link':'https://drive.google.com/file/d/1r9yXSpQo0d53VfsabuEQxlv_OpiHyeBy/view?usp=share_link'}],
+                                    'subtitulo':'Visita al pueblo de Postdam y sus castillos',
+                                    'descripcion':'Partimos a la mañana temprano y nos trasladamos en transporte público',
+                                    'icon':'walk',
+                                    'small':true,
+                                    'date':new Date('Tue May 2 2023 18:30:00 GMT+0200')},
+
+                                    {'titulo':'Salida',
+                                    'links':[{'text':'Tickets','link':'https://www.ryanair.com/es/es/trip/manage/a3b85c42-c684-44d1-98fa-8c4ae73b496c'}],
+                                    'subtitulo':'Aeropuerto:Berlín Bradenburg Reserva:HH194A',
+                                    'descripcion':'RyanAir CheckIn listo',
+                                    'icon':'flight_up',
+                                    'small':true,
+                                    'date':new Date('Wed May 3 2023 11:00:00 GMT+0200')},
+                                ];
+
+                                   
             request.info_tec = 'Se realizaron diferentes soluciones de frontend con React.Se gestionaban las tareas con Trello. El código se ordenaba con dependencias de npm y git. Backend con pymongo (python y mongo). Se realizaron tareas de maching Learning con python y tensor flow';
-            request.tecnologias = 'trello,javascript,react,npm,tensorFlow,python,mongo,git';
+            
             return request
         },
         /*component,sync,proyect,work,verified,ncr*/ 
-        ncr:function(){
+        roma:function(){
             request.info = 'Desarrollador Fullstack y Analista. Consultor';
             request.fecha_inicial = '02/09/2019';
             request.fecha_final = 'Actual';
-            request.before = 'Cetek';
-            request.after = false;
-            request.titulo = 'NCR';
+            request.before = 'Berlin';
+            request.after = 'Nerja';
+            request.titulo = 'Roma';
             request.cargo = 'Programador full stack';
-            request.descripcion = [{'titulo':'NCR','subtitulo':'Desarrollador Fullstack y Consultor','descripcion':'','icon':'ncr','small':true},
-                                    {'titulo':'Tareas Realizadas',
-                                    'subtitulo':'Frontend y Backend',
-                                    'descripcion':'Se implementaron soluciones orientadas a la educación a distancia y aprender de los datos de los alumnos en las cursadas. Se minaban datos y se realizaba webscrapping desde la pagina del campus de los alumnos y se administraban con una base de datos Mongo desde el cual se consultaban desde otros desarrollos orientados al monitoreo y tareas de learning analytics.',
-                                    'icon':'verified',
-                                    'small':false},
-                                   {'titulo':'Tecnologías Utilizadas',
-                                   'subtitulo':'Frontend y Backend',
-                                   'descripcion':'Principales soluciones con javascript, html y css. Se emplean frameworks propios de la empresa.  Otras librerías y frameworks utilizados son react, Angular, typescript y Rxjs. Desarrollo inclusive a bajo nivel para soluciones de hardware de ATMs. Algunos productos con ambiente Django.',
-                                   'icon':'schema',
-                                   'small':false},
-                                   {'titulo':'Ambientes',
-                                   'subtitulo':'Azure, Sharepoint y Microsoft en general',
-                                   'descripcion':'Se realizan storage en sharepoint.Gestión, administración y automatización con azure, pipeline y node.', 
-                                   'icon':'component',
-                                   'small':false},
-                                   {'titulo':'Clientes',
-                                   'subtitulo':'Principalmente Bancos y Financieras con transacciones Cash',
-                                   'descripcion':'',
-                                   'icon':'work',
-                                   'small':true}];
-            request.info_tec = 'Principales soluciones con javascript, html y css. Frameworks propios de la empresa. react, angular, Typescript y RXJS. Storage en sharepoint. Gestión y administración con azure y npm. Productos con ambiente de Django. Testing point to point con Cypress. Desarrollo a bajo nivel y soluciones para hardware de ATM.';
-            request.tecnologias = 'angular,cypres,rxjs,jenkins,react,django,typescript,html,css,javascript,azure,git,npm';
-            return request
-        },
-    }
-}
+            request.descripcion = [
+                {'titulo':'Roma','subtitulo':"Via L'Aquila, 52",'descripcion':'','icon':'roma','small':true},
 
-/*module.exports = function() {
-    var request = {}
-    return {
-        tecnico:function(){
-            request.info = 'Si bien previamente mantuve conocimientos informáticos al terminar el secundario, continue desempeñando tareas freelance ' + 
-                            'y ofrecí mis servicios a través de la web en reparación , instalaciones y armado de pc,nooteboock, incluso celulares y tablets. ' + 
-                            'Mantuve estas actividades durante un alrgo periodo como soporte económico, razón por lacual se solapo en muchos casos con otros' + 
-                            ' desempeños como lo fue la venta de accesorios o incluso periodos durante mi trabajo en Cetek en la fiuba';
-            request.fecha_inicial = '2009';
-            request.fecha_final = '2017';
-            request.before = 'Accesorios';
-            request.after = 'Cetek';
-            request.titulo = 'Técnico Informático';
-            request.cargo = 'Programador y ventas';
+                {'titulo':'Llegada a Bergamo Airport',
+                'subtitulo':'',
+                'descripcion':'',
+                'icon':'flight_down',
+                'small':false,
+                'date':new Date('Wed May 3 2023 12:45:00 GMT+0200')},
+
+                {'titulo':'Traslado a  Milano Centrale',
+                'links':[{'text':'Tickets','link':'https://drive.google.com/file/d/1hz6Ijz_i5_BpPqCtBwbjMSYvgclYAWMu/view?usp=share_link'}],
+                'subtitulo':'Salida de tren desde Bergamo a Milano Centrale',
+                'descripcion':'KLM CheckIn:Sábado 28 de abril desde las 4:15',
+                'icon':'train',
+                'small':true,
+                'date':new Date('Wed May 3 2023 15:10:00 GMT+0200')},
+
+                {'titulo':'Conexión Milano Centrale a Roma',
+                'links':[{'text':'Tickets','link':'https://drive.google.com/file/d/1hz6Ijz_i5_BpPqCtBwbjMSYvgclYAWMu/view?usp=share_link'}],
+                'subtitulo':'',
+                'descripcion':'',
+                'icon':'train',
+                'small':true,
+                'date':new Date('Wed May 3 2023 16:30:00 GMT+0200')},
+
+                {'titulo':'Roma Termini',
+                'links':[],
+                'subtitulo':'Estación Terminal de tren de Roma',
+                'descripcion':'Comprar 14 ticket de 100 minutos en la estación para tenerlos listos los días siguientes.',
+                'icon':'city',
+                'small':true,
+                'date':new Date('Wed May 3 2023 19:50:00 GMT+0200')},
+
+                {'titulo':'Traslado a Hospedaje',
+                'links':[],
+                'subtitulo':'Desde la Estación Terminal de tren de Roma',
+                'descripcion':'Tomar Tranvía 14 y 15 hasta Prenestino hasta las 23.30',
+                'icon':'train',
+                'small':true,
+                'date':new Date('Wed May 3 2023 20:00:00 GMT+0200')},
+
+                {'titulo':'Hospedaje',
+                'links':[{'text':'Tickets','link':'https://www.airbnb.com.ar/trips/v1/f8d2df8b-d3ca-4ab8-9d28-aeb4cccfd01d/ro/RESERVATION_USER_CHECKIN/HM39PE4PCK'}],
+                'subtitulo':'',
+                'descripcion':"Via L'Aquila, 52 Interno 9, scala unica, piano III senza ascensore, Roma, Lazio 00176, Italia",
+                'icon':'airbnb',
+                'small':true,
+                'date':new Date('Wed May 3 2023 21:50:00 GMT+0200')},
+
+                {'titulo':'Coliseo, Palatino y Foro romano',
+                'links':[{'text':'Ubicación Touristation ','link':'https://goo.gl/maps/f8hxQ5yDYQnYmNcp6'},
+                         {'text':'Reserva','link':'https://drive.google.com/file/d/1IhoLLU0xOAWHkB2ufvxF48nfs_jvpevW/view?usp=share_link'}],
+                'subtitulo':'',
+                'descripcion':"* Tomar línea 81 de bus. * Tenemos la reserva para las 10:00 a.m. * El punto de encuentro con el personal de turismo es: TOURISTATION PIAZZA VENEZIA: Piazza D'Ara Coeli. * Tenemos que estar 20 minutos antes en este lugar.",
+                'icon':'city',
+                'small':true,
+                'date':new Date('Thu May 4 2023 9:15:00 GMT+0200')},
+
+                {'titulo':'Recorrido a la salida del Coliseo',
+                'links':[],
+                'subtitulo':'',
+                'descripcion':"[1] Circo máximo (Gratis). [2] Boca de la verdad. [3] Plaza Venecia y el Altar a la Patria. [4] Foro de Trajano "+
+                            "[5] Panteón de Agripa. [6]Fontana de Trevi. [7]Gelateria Valentino.",
+                'icon':'walk',
+                'small':true,
+                'date':new Date('Thu May 4 2023 10:15:00 GMT+0200')},
+
+                {'titulo':'Comida',
+                'links':[],
+                'subtitulo':'',
+                'descripcion':"OPCIONES DE COMIDA PARA EL PRIMER DIA:PIZZA FLORIDA: 00186, Via Florida, 25, 00186 Roma RM, Italia (barato y rico según el blog)" + 
+                            "Si nos queremos sentar a comer: Giggetto al Portico d’Ottavia en la Via del Portico d’Ottavia, 21. (entre 30 y 40 euros por persona)" +
+                            "Grom gelato; gelateria Romana;Giolitti (noccioola con pistaccio) Venchi.",
+                'icon':'lunch',
+                'small':true,
+                'date':new Date('Thu May 4 2023 21:15:00 GMT+0200')},
+
+                {'titulo':'Retorno a Hospedaje',
+                'links':[],
+                'subtitulo':'',
+                'descripcion':'',
+                'icon':'bus',
+                'small':true,
+                'date':new Date('Thu May 4 2023 22:00:00 GMT+0200')},
+
+                {'titulo':'Vaticano & Capilla Sixtina',
+                'links':[{'text':'Ubicación Touristation ','link':'https://www.google.com/maps/place/Viale+Vaticano,+97,+00192+Roma+RM,+Italia/@41.9069145,12.4504697,17z/data=!4m15!1m8!3m7!1s0x132f607a922f1a35:0x544821744fabcb2b!2sViale+Vaticano,+97,+00192+Roma+RM,+Italia!3b1!8m2!3d41.9069145!4d12.4526584!16s%2Fg%2F11cshmddnn!3m5!1s0x132f607a922f1a35:0x544821744fabcb2b!8m2!3d41.9069145!4d12.4526584!16s%2Fg%2F11cshmddnn'},
+                         {'text':'Reserva ','link':'https://drive.google.com/file/d/1nVQVepemC3ZyCYUfl6PldoIXmeewFnbP/view?usp=share_link'}],
+                'subtitulo':'',
+                'descripcion':"Encuentro en Viale Vaticano, 97 9:45.* Vaticano. * Basílica de San Pedro. * Museo del Vaticano. * Capilla sixtina",
+                'icon':'city',
+                'small':true,
+                'date':new Date('Friday May 5 2023 8:00:00 GMT+0200')},
+
+                
+                {'titulo':"Castillo y Puente de Sant'Angelo",
+                'links':[{'text':'Ubicación ','link':'https://www.google.com/maps/place/Lungotevere+Castello,+50,+00186+Roma+RM,+Italia/@41.9030686,12.4637004,17z/data=!4m15!1m8!3m7!1s0x132f605c7a08f955:0x65cd4a5322cc5698!2sLungotevere+Castello,+50,+00186+Roma+RM,+Italia!3b1!8m2!3d41.9030646!4d12.4662753!16s%2Fg%2F11bw4jv8mj!3m5!1s0x132f605c7a08f955:0x65cd4a5322cc5698!8m2!3d41.9030646!4d12.4662753!16s%2Fg%2F11bw4jv8mj?hl=es'},
+                         {'text':'Reserva ','link':'https://drive.google.com/file/d/1OUYWeWr-NYHO5aBHtg5u32zev7gT0Qrq/view?usp=share_link'}],
+                'subtitulo':'',
+                'descripcion':"Presentar a la entrada del castillo Lungotevere Castello, 50.",
+                'icon':'city',
+                'small':true,
+                'date':new Date('Friday May 5 2023 12:00:00 GMT+0200')},
+
+                {'titulo':'Comida',
+                'links':[{'text':'Ubicación ','link':'https://goo.gl/maps/KGGNh8YTdzDg3va37'}],
+                'subtitulo':'',
+                'descripcion':"Para comer cerca, el Likeat tiene un bocata de porcetta super recomendado, si te cuadra algo rápido para seguir la ruta. Está a 5 minutos andando del castillo de Sant´Angelo, en la calle Corso Vittorio Emanuele II 310.",
+                'icon':'lunch',
+                'small':true,
+                'date':new Date('Friday May 5 2023 14:30:00 GMT+0200')},
+
+                {'titulo':'Recorrido',
+                'links':[],
+                'subtitulo':'',
+                'descripcion':"* Piazza Navona. * Campo di Fiori. * Teatro Marcello. * Isla Tiberina ",
+                'icon':'walk',
+                'small':true,
+                'date':new Date('Friday May 5 2023 18:30:00 GMT+0200')},
+
+                {'titulo':'Ruta Gastronomica Trasteverre',
+                'links':[{'text':'GuruWalk ','link':'https://www.guruwalk.com/es/vx9dk4c7gx537sfj34dr/messages/received/2121098?'},
+                {'text':'Civitatis ','link':'https://www.civitatis.com/es/roma/tour-gastronomico-barrio-trastevere/?aid=1065'},
+                {'text':'Ubicación ','link':'https://maps.app.goo.gl/x42jBv3e1B7thS1C7'}],
+                'subtitulo':'',
+                'descripcion':"Salir desde Piazza Trilussa en tour Guru",
+                'icon':'lunch',
+                'small':true,
+                'date':new Date('Friday May 5 2023 18:30:00 GMT+0200')},
+                        
+
+                {'titulo':'Basilica el Sagrado Corazón de Jeses Santa Maria della Neve',
+                'links':[],
+                'subtitulo':'',
+                'descripcion':"Trasladarse desde el hospedaje",
+                'icon':'walk',
+                'small':true,
+                'date':new Date('Sat May 6 2023 8:30:00 GMT+0200')},
+
+                {'titulo':'Recorrido de Popolo a Vincoli',
+                'links':[],
+                'subtitulo':'',
+                'descripcion':"Plaza del Popolo * Vía del Corso * Pompi Tiramisù * Vía Condotti * Galería Alberto Sordi * Alberto Sordi * Plaza Colonna * Piazza di Pietra * Vía del Boschetto * Basílica San Pietro in Vincoli",
+                'icon':'walk',
+                'small':true,
+                'date':new Date('Sat May 6 2023 8:30:00 GMT+0200')},
+                
+
+                {'titulo':'Taxi a Fiumicino',
+                'links':[],
+                'subtitulo':'',
+                'descripcion':"",
+                'icon':'bus',
+                'small':true,
+                'date':new Date('Sun May 7 2023 2:40:00 GMT+0200')},
+
+                {'titulo':'Salida',
+                'links':[{'text':'WizzAir','link':'https://wizzair.com/es-es#/'}],
+                'subtitulo':'Aeropuerto:Fiumicino Reserva:CCWQ8P',
+                'descripcion':'WizzAir CheckIn hasta 3hs antes de la salida',
+                'icon':'flight_up',
+                'small':true,
+                'date':new Date('Sun May 7 2023 6:05:00 GMT+0200')},
+
+                ];
+            request.info_tec = 'Principales soluciones con javascript, html y css. Frameworks propios de la empresa. react, angular, Typescript y RXJS. Storage en sharepoint. Gestión y administración con azure y npm. Productos con ambiente de Django. Testing point to point con Cypress. Desarrollo a bajo nivel y soluciones para hardware de ATM.';
+           
             return request
         },
-        accesorios:function(){
-            request.info =  '   Encargado de marketing y creación de web para la venta de accesorios automotrices.' + 
-                            'Venta de equipos de iluminación y respuestos para autos. ' + 
-                            'Tuve que encontrar soluciones para poder vender grandes catálogos provistos por un depósito de respuestos clásicos y desempañarme en administración de cartilla de clientes. ' + 
-                            'Las soluciones fueron factibles y ofrecía la flexibilidad que me permitía mantener los estudios sin operar al 100% en ello durante el transcurso del día' + 
-                            'Una vez que los artículos o piezas comenzaban a escasear comenzó a ser difícil conseguir oportunidades similares. Además de no ser compatible para la carrera en la cual me estaba embarcando a nivel académico.';
-            request.fecha_inicial = '2011';
-            request.fecha_final = '2017';
-            request.before = false;
-            request.after = 'Tecnico';
-            request.titulo = 'Accesorios Sur';
-            request.cargo = 'Programador y ventas';
-            return request
-        },
-        cetek:function(){
-            request.info = 'Desarrollo de software para soluciones relacionadas con el manejo de datos y realidad aumentada.Las tareas se desarrollaban' +
-                            ' en el departamento de Educación a Distancia de la facultad de ingeniería de la UBA.' + 
-                            ' Esta gran etapa contemplo de periodo de aprendisaje de multiples herramientas como punto de partido para comenar a sentar la base como perfil de desarrollo' +
-                            ' Aquí mantuve  acesoramiento directo de profesores del campo e incursiené por primera vez en data analyst y maching learning.';
-            request.fecha_inicial = '20/08/2017';
-            request.fecha_final = '05/08/2019';
-            request.before = 'Tecnico';
-            request.after = 'Ncr';
-            request.titulo = 'Cetek';
-            request.cargo = 'Programador ';
-            return request
-        },
-        ncr:function(){
-            request.info = 'Desarrollador full stack. Manejo de soluciones , soporte e implementaciones en proyectos vinculados con el manejo de aplicaciones y sus interfaces ' + 
-                            'en terminales ATM y portales. Asistiendo y dando soporte de las mismas a los clientes en su mayoría bancos. Los proyectos involucran' + 
-                            ' conocimiento tanto en programación como una base técnica para poder implementar aplicaciones que se comunican directamente con el manejo de hardware ' +
-                             ', software para la comunicación de apis y el backend de los clientes para brindar aplicaciones destinadas al manejo de cash dispenser para usuarios de terminales ATM de NCR y clientes asociados.';
+        nerja:function(){
+            request.info = 'Desarrollador Fullstack y Analista. Consultor';
             request.fecha_inicial = '02/09/2019';
             request.fecha_final = 'Actual';
-            request.before = 'Cetek';
-            request.after = false;
-            request.titulo = 'NCR';
+            request.before = 'Roma';
+            request.after = 'Madrid';
+            request.titulo = 'Nerja';
             request.cargo = 'Programador full stack';
+            request.descripcion = [
+                {'titulo':'Nerja','subtitulo':'Casa de Adela Ruiz Diaz ','descripcion':'','icon':'nerja','small':true},
+
+                {'titulo':'Llegada a Málaga',
+                'subtitulo':'Aeropuerto de Málaga',
+                'descripcion':'Nos van a buscar al aeropuerto.',
+                'icon':'flight_down',
+                'small':false,
+                'date':new Date('Sun May 7 2023 8:55:00 GMT+0200')},
+
+                {'titulo':'Cuevas de Nerja',
+                'subtitulo':'',
+                'descripcion':'Traslado desde la plaza principal en el tren hasta la cueva y el museo',
+                'icon':'image_black',
+                'small':false,
+                'date':new Date('Mon May 8 2023 10:00:00 GMT+0200')},
+
+                {'titulo':'Salida',
+                'links':[{'text':'EuropaAir','link':'https://www.aireuropa.com/ar/es/mytrips/managereservation?reservationId=3N4AH3&lastName=PEYRANO&checkinBox=false&search=true'}],
+                'subtitulo':'Aeropuerto Málaga Reserva:3N4AH3',
+                'descripcion':'EuropaAir Checkin: 24 u 48hs antes.',
+                'icon':'flight_up',
+                'small':false,
+                'date':new Date('Wed May 10 2023 8:35:00 GMT+0200')},
+
+                ];
+            request.info_tec = 'Principales soluciones con javascript, html y css. Frameworks propios de la empresa. react, angular, Typescript y RXJS. Storage en sharepoint. Gestión y administración con azure y npm. Productos con ambiente de Django. Testing point to point con Cypress. Desarrollo a bajo nivel y soluciones para hardware de ATM.';
+           
+            return request
+        },
+        madrid:function(){
+            request.info = 'Desarrollador Fullstack y Analista. Consultor';
+            request.fecha_inicial = '02/09/2019';
+            request.fecha_final = 'Actual';
+            request.before = 'Nerja';
+            request.after = false;
+            request.titulo = 'Madrid';
+            request.cargo = 'Programador full stack';
+            request.descripcion = [{'titulo':'Madrid','subtitulo':'Hostel Madrid','descripcion':'','icon':'madrid','small':true},
+                                    
+            {'titulo':'Llegada a Madrid',
+            'subtitulo':'Aeropuerto Barajas',
+            'descripcion':'Cargar la tarjeta para pasajes (alrededor de 12 traslados)',
+            'icon':'flight_down',
+            'small':false,
+            'date':new Date('Wed May 10 2023 9:55:00 GMT+0200')},
+
+            {'titulo':'Traslado',
+            'subtitulo':'',
+            'descripcion':'',
+            'icon':'bus',
+            'small':false,
+            'date':new Date('Wed May 10 2023 10:00:00 GMT+0200')},
+
+            {'titulo':'Hospedaje',
+            'subtitulo':'',
+            'descripcion':'',
+            'icon':'airbnb',
+            'small':false,
+            'date':new Date('Wed May 10 2023 10:35:00 GMT+0200')},
+
+            {'titulo':'Santiago Bernabeu',
+            'subtitulo':'',
+            'descripcion':'',
+            'icon':'city',
+            'small':false,
+            'date':new Date('Wed May 10 2023 13:35:00 GMT+0200')},
+
+            {'titulo':'Plaza Mayor a Plaza del retiro',
+            'links':[{'text':'GuruWalk','link':'https://www.guruwalk.com/es/walks/38448-free-tour-madrid-el-otro-lado'}],
+            'subtitulo':'',
+            'descripcion':'',
+            'icon':'walk',
+            'small':false,
+            'date':new Date('Wed May 10 2023 17:35:00 GMT+0200')},
+
+            {'titulo':'Museo del Jamón',
+            'subtitulo':'Cena',
+            'descripcion':'Momento para elegir aquí u otra comida',
+            'icon':'lunch',
+            'small':false,
+            'date':new Date('Wed May 10 2023 20:55:00 GMT+0200')},
+
+            {'titulo':'Excursión a Avila y Segovia',
+            'subtitulo':'Reserva: GYGX7Q2YYLQF',
+            'descripcion':'Excursion con guía de GetyoutGuide',
+            'icon':'bus',
+            'small':false,
+            'date':new Date('Thu May 11 2023 20:55:00 GMT+0200')},
+
+            {'titulo':'Recorrido de Compras',
+            'subtitulo':'Shopping',
+            'descripcion':'SARA - PRIMARK - OULETS - LA GRAN VIA',
+            'icon':'card',
+            'small':false,
+            'date':new Date('Fri May 12 2023 20:55:00 GMT+0200')},
+
+            {'titulo':'Taxi a Barajas Airport',
+            'subtitulo':'Shopping',
+            'descripcion':'SARA - PRIMARK - OULETS - LA GRAN VIA',
+            'icon':'card',
+            'small':false,
+            'date':new Date('Sat May 12 2023 2:35:00 GMT+0200')},
+
+            {'titulo':'Salida',
+            'links':[{'text':'Tickets','link':'https://wwws.airfrance.fr/en/trip/trip-details?id=de70f119-b796-4a42-9d15-7f1e33cc0eea'}],                    
+            'subtitulo':'AirFrance Reserva:43BYCG',
+            'descripcion':'CheckIn:Averiguar  Recordar realizar TAXES FREE',
+            'icon':'card',
+            'small':false,
+            'date':new Date('Sat May 12 2023 6:10:00 GMT+0200')},
+                                   
+                                ];
+            request.info_tec = 'Principales soluciones con javascript, html y css. Frameworks propios de la empresa. react, angular, Typescript y RXJS. Storage en sharepoint. Gestión y administración con azure y npm. Productos con ambiente de Django. Testing point to point con Cypress. Desarrollo a bajo nivel y soluciones para hardware de ATM.';
+            
             return request
         },
     }
 }
-
-
-*/ 
