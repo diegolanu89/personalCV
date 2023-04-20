@@ -4,7 +4,7 @@ module.exports = function() {
         paris:function(){
             request.info = 'Primer país que visitamos';
             request.fecha_inicial = '22/04';
-            request.fecha_final = '06/2017';
+            request.fecha_final = '26/04';
             request.before = false;
             request.after = 'Holanda';
             request.titulo = 'Paris';
@@ -154,8 +154,8 @@ module.exports = function() {
         },
         holanda:function(){
             request.info = 'Nos trasladamos a la casa de Paula  & Andre.'
-            request.fecha_inicial = '03/2011';
-            request.fecha_final = '06/2017';
+            request.fecha_inicial = '26/04';
+            request.fecha_final = '30/04';
             request.before = 'Paris';
             request.after = 'Berlin';
             request.titulo = 'Holanda';
@@ -185,8 +185,8 @@ module.exports = function() {
         },
         berlin:function(){
             request.info = 'Tercer Destino Berlin';
-            request.fecha_inicial = '20/08/2017';
-            request.fecha_final = '05/08/2019';
+            request.fecha_inicial = '30/04';
+            request.fecha_final = '03/05';
             request.before = 'Holanda';
             request.after = 'Roma';
             request.titulo = 'Berlin';
@@ -294,8 +294,8 @@ module.exports = function() {
         /*component,sync,proyect,work,verified,ncr*/ 
         roma:function(){
             request.info = 'Desarrollador Fullstack y Analista. Consultor';
-            request.fecha_inicial = '02/09/2019';
-            request.fecha_final = 'Actual';
+            request.fecha_inicial = '03/05';
+            request.fecha_final = '07/05';
             request.before = 'Berlin';
             request.after = 'Nerja';
             request.titulo = 'Roma';
@@ -472,8 +472,8 @@ module.exports = function() {
         },
         nerja:function(){
             request.info = 'Desarrollador Fullstack y Analista. Consultor';
-            request.fecha_inicial = '02/09/2019';
-            request.fecha_final = 'Actual';
+            request.fecha_inicial = '07/05';
+            request.fecha_final = '10/05';
             request.before = 'Roma';
             request.after = 'Madrid';
             request.titulo = 'Nerja';
@@ -510,8 +510,8 @@ module.exports = function() {
         },
         madrid:function(){
             request.info = 'Desarrollador Fullstack y Analista. Consultor';
-            request.fecha_inicial = '02/09/2019';
-            request.fecha_final = 'Actual';
+            request.fecha_inicial = '10/05';
+            request.fecha_final = '13/05';
             request.before = 'Nerja';
             request.after = false;
             request.titulo = 'Madrid';

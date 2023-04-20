@@ -12,7 +12,7 @@ export const travels_info_pre=()=>{
 
 export const details=()=>{
     return ['Ciudad de París y Versailles.',
-    'Holanda, pasando pro Amsterdam Eidhoven y exursiones desde allí a Bélgica juntos a Pauola y Andre.',
+    'Holanda, pasando por Amsterdam Eidhoven y exursiones desde allí a Bélgica juntos a Pauola y Andre.',
     'Alemania y Postdam.',
     'Breve Conexión en Bergamo y Milan y desde a allé a la ciudad de Roma.',
     'Desde Málaga nos trasladamos a Nerja y visitamos a Adela.',
